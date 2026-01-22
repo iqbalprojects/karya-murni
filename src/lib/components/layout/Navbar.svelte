@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
+
+	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
 
 	const navLinks = [
 		{
@@ -27,7 +30,7 @@
 <NavigationMenu.Root viewport={false}>
 	<NavigationMenu.List class="space-x-12">
 		{#each navLinks as link}
-			<NavigationMenu.Item class="text-white">
+			<NavigationMenu.Item class={isEquipmentDetail ? 'text-black' : 'text-white'}>
 				{#if 'subLinks' in link}
 					<NavigationMenu.Trigger class="cursor-pointer bg-transparent"
 						>{link.label}</NavigationMenu.Trigger
