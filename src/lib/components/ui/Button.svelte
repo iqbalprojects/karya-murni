@@ -1,5 +1,5 @@
 <script>
-	let { variant = 'default', href = '#', class: className = '', children, ...restProps } = $props();
+	let { variant = 'default', class: className = '', children, ...restProps } = $props();
 </script>
 
 <a
