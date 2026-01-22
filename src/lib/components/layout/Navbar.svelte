@@ -29,7 +29,9 @@
 		{#each navLinks as link}
 			<NavigationMenu.Item class="text-white">
 				{#if 'subLinks' in link}
-					<NavigationMenu.Trigger class="bg-transparent">{link.label}</NavigationMenu.Trigger>
+					<NavigationMenu.Trigger class="cursor-pointer bg-transparent"
+						>{link.label}</NavigationMenu.Trigger
+					>
 					<NavigationMenu.Content>
 						<ul class="grid w-[200px] gap-4 p-2">
 							{#each link.subLinks as subLink}

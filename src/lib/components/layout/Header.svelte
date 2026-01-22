@@ -6,9 +6,24 @@
 	import kmpLogo from '$lib/assets/images/kmp-logo.png';
 
 	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
+
+	let scrolled = $state(false);
+
+	$effect(() => {
+		const handleScroll = () => {
+			scrolled = window.scrollY > 0;
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	});
 </script>
 
-<header class="z-50 w-full {isEquipmentDetail ? '' : 'fixed top-0'}">
+<header
+	class="z-50 w-full transition-colors duration-300 {isEquipmentDetail
+		? ''
+		: 'fixed top-0'} {scrolled ? 'bg-black/20 backdrop-blur-sm' : ''}"
+>
 	<div class="container mx-auto flex h-[72px] items-center justify-between px-20">
 		<a href="/" class="flex items-center gap-x-3">
 			<img src={sbpnLogo} alt="SBPN Logo" width="46" height="46" />
