@@ -8,7 +8,7 @@
 	import Clients from '$lib/components/ui/Clients.svelte';
 </script>
 
-<div>
+<div class="pb-20">
 	<Hero />
 	<Overview />
 	<img src={divider} alt="Divider" />

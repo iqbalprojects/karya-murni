@@ -1,19 +1,23 @@
-<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+	let { size = 28, color = '#D0D5DD', fillOpacity = 0.3 } = $props();
+</script>
+
+<svg width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M6.81856 14.7012C5.78953 18.7744 8.28805 21.5238 9.61323 22.3768C11.1162 23.3241 14.6095 25.0548 18.8632 22.0619C22.4999 19.503 25.2338 11.5746 20.5952 2.77466C17.9723 8.78743 8.53493 7.90726 6.81856 14.7012Z"
-		fill="white"
-		fill-opacity="0.3"
+		fill={color}
+		fill-opacity={fillOpacity}
 	/>
 	<path
 		d="M14.151 23.7175C22.9041 23.4282 25.2358 11.1019 20.6345 2.72217C17.9761 8.27706 11.8425 7.44172 8.41095 11.6728C7.39362 12.9266 6.60962 14.6299 6.60962 16.4671C6.60962 18.9202 7.8214 21.0902 9.67717 22.4031"
-		stroke="#D0D5DD"
+		stroke={color}
 		stroke-width="1.8"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 	/>
 	<path
 		d="M4.27783 25.2779C4.27783 25.2779 11.4303 23.3101 15.9445 15.1667"
-		stroke="#D0D5DD"
+		stroke={color}
 		stroke-width="1.8"
 		stroke-linecap="round"
 		stroke-linejoin="round"

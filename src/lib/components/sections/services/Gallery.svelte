@@ -81,7 +81,7 @@
 		<Carousel.Content>
 			{#each galleries as gallery}
 				<Carousel.Item class="space-y-9">
-					<div class="max-w-4xl space-y-3">
+					<div class="container max-w-4xl space-y-3 px-20">
 						<h3 class="font-faculty-glyphic text-2xl">{gallery.title}</h3>
 						<p class="text-lg">{gallery.description}</p>
 					</div>
@@ -89,9 +89,9 @@
 						{#each gallery.results as result}
 							<li class="relative h-full w-full">
 								<img src={result.image} alt={result.title} class="aspect-video h-full w-full" />
-								<div class="absolute bottom-0 text-white">
-									<h4>{result.title}</h4>
-									<p>{result.description}</p>
+								<div class="absolute bottom-[33px] left-8 space-y-2 text-white">
+									<h4 class="font-faculty-glyphic text-[28px]">{result.title}</h4>
+									<p class="text-lg text-white/70">{result.description}</p>
 								</div>
 							</li>
 						{/each}

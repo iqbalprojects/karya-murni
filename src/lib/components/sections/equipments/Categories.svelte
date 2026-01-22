@@ -19,11 +19,11 @@
 	];
 </script>
 
-<section class="space-y-[60px] p-20">
+<section class="container mx-auto space-y-[60px] p-20">
 	<div class="grid grid-cols-2">
-		<div>
-			<h3>Categories</h3>
-			<p>
+		<div class="space-y-4">
+			<h3 class="font-faculty-glyphic text-5xl">Categories</h3>
+			<p class="text-lg text-gray-600">
 				Our operations are supported by a robust fleet of 500+ heavy machinery units, maintained
 				regularly to ensure performance, safety, and productivity in the field.
 			</p>

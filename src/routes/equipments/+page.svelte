@@ -5,14 +5,12 @@
 	import Clients from '$lib/components/ui/Clients.svelte';
 </script>
 
-<div>
+<div class="pb-20">
 	<Hero backgroundImage={heroBackground} aspectRatio="aspect-3/1">
 		<div class="space-y-4 font-faculty-glyphic">
 			<h1 class="text-4xl leading-tight md:text-6xl lg:text-[76px]">Equipments & Assets</h1>
 		</div>
 	</Hero>
-	<div class="container mx-auto">
-		<Categories />
-	</div>
+	<Categories />
 	<Clients />
 </div>

@@ -20,22 +20,22 @@
 	];
 </script>
 
-<section class="container mx-auto p-20">
-	<div>
-		<h2>Work Scope</h2>
-		<p>
+<section class="container mx-auto space-y-[60px] p-20">
+	<div class="max-w-[628px] space-y-4">
+		<h2 class="font-faculty-glyphic text-5xl">Work Scope</h2>
+		<p class="text-lg text-gray-600">
 			Our land clearing services cover the full range of preparatory tasks required for estate-grade
 			development:
 		</p>
-		<ul class="grid grid-cols-4 gap-2">
-			{#each workScopeItems as item}
-				<li class="relative">
-					<img src={item.image} alt={item.title} class="aspect-video" />
-					<p class="absolute bottom-[30px] left-6 font-faculty-glyphic text-2xl text-white">
-						{item.title}
-					</p>
-				</li>
-			{/each}
-		</ul>
 	</div>
+	<ul class="grid grid-cols-4 gap-2">
+		{#each workScopeItems as item}
+			<li class="relative">
+				<img src={item.image} alt={item.title} class="aspect-video rounded-sm" />
+				<p class="absolute bottom-[30px] left-6 font-faculty-glyphic text-2xl text-white">
+					{item.title}
+				</p>
+			</li>
+		{/each}
+	</ul>
 </section>

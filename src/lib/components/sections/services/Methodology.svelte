@@ -34,9 +34,9 @@
 
 <section class="bg-[#101828] pt-[126px] pb-20 text-white">
 	<div class="container mx-auto grid grid-cols-2 px-20">
-		<div>
-			<h2>Methodology & Execution</h2>
-			<p>
+		<div class="space-y-5">
+			<h2 class="font-faculty-glyphic text-[52px] leading-[115%]">Methodology & Execution</h2>
+			<p class="text-lg text-gray-400">
 				We follow a systematic and proven approach that prioritizes safety, efficiency, and
 				environmental responsibility:
 			</p>
@@ -44,7 +44,7 @@
 		<ul>
 			{#each methods as method}
 				<li class="flex items-start gap-x-6 py-11">
-					<method.icon />
+					<method.icon size={28} color="#D0D5DD" />
 					<p>{method.description}</p>
 				</li>
 			{/each}
