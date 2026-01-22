@@ -266,7 +266,7 @@
 	});
 </script>
 
-<div class="container mx-auto space-y-[60px]">
+<div class="container mx-auto mt-16 mb-[100px] space-y-[60px]">
 	<section>
 		<h1 class="font-faculty-glyphic text-5xl">250 Unit Excavator</h1>
 		<p class="text-lg text-gray-600">
@@ -275,7 +275,7 @@
 			you work efficiently every day.
 		</p>
 	</section>
-	<section class="mb-[100px] space-y-[70px] text-center">
+	<section class="space-y-[70px] text-center">
 		<div class="space-y-7">
 			<ul class="grid grid-cols-5 gap-x-2">
 				{#each types as type}
