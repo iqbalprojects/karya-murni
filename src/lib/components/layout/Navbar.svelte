@@ -5,16 +5,12 @@
 	const navLinks = [
 		{
 			href: '/about',
-			label: 'About',
-			subLinks: [{ href: '/land-clearing', label: 'Land Clearing' }]
+			label: 'About'
 		},
 		{
 			href: '/services',
 			label: 'Services',
-			subLinks: [
-				{ href: '/land-clearing', label: 'Land Clearing' },
-				{ href: '/land-clearing', label: 'Land Clearing' }
-			]
+			subLinks: [{ href: '/land-clearing', label: 'Land Clearing' }]
 		},
 		{
 			href: '/projects',
@@ -29,7 +25,7 @@
 </script>
 
 <NavigationMenu.Root viewport={false}>
-	<NavigationMenu.List>
+	<NavigationMenu.List class="space-x-12">
 		{#each navLinks as link}
 			<NavigationMenu.Item class="text-white">
 				{#if 'subLinks' in link}
