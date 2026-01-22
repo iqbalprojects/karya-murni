@@ -266,8 +266,8 @@
 	});
 </script>
 
-<div class="container mx-auto mt-16 mb-[100px] space-y-[60px]">
-	<section>
+<div class="container mx-auto mt-16 mb-[100px] space-y-[60px] px-20">
+	<section class="space-y-4">
 		<h1 class="font-faculty-glyphic text-5xl">250 Unit Excavator</h1>
 		<p class="text-lg text-gray-600">
 			Offered in multiple sizes and configurations, they are designed for simple operation,
