@@ -87,8 +87,17 @@
 					</div>
 					<ul class="flex items-center">
 						{#each gallery.results as result}
-							<li class="relative h-full w-full">
+							<li class="relative h-full w-full overflow-hidden">
 								<img src={result.image} alt={result.title} class="aspect-video h-full w-full" />
+								<!-- Progressive blur -->
+								<div
+									class="absolute inset-x-0 top-1/3 bottom-0 backdrop-blur-md"
+									style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
+								></div>
+								<!-- Gradient overlay -->
+								<div
+									class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"
+								></div>
 								<div class="absolute bottom-[33px] left-8 space-y-2 text-white">
 									<h4 class="font-faculty-glyphic text-[28px]">{result.title}</h4>
 									<p class="text-lg text-white/70">{result.description}</p>

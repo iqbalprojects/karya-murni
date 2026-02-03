@@ -28,7 +28,7 @@
 	];
 </script>
 
-<section class="space-y-[60px] p-20">
+<section class="space-y-[60px] p-20 container mx-auto">
 	<div class="space-y-3">
 		<Section variant="primary">Our Services</Section>
 		<h2 class="font-faculty-glyphic text-5xl">Solutions for Your Sustainable Future</h2>

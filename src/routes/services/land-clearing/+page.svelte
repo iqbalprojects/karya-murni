@@ -6,9 +6,13 @@
 	import Methodology from '$lib/components/sections/services/Methodology.svelte';
 	import Gallery from '$lib/components/sections/services/Gallery.svelte';
 	import Clients from '$lib/components/ui/Clients.svelte';
+	import TrackRecords from '$lib/components/sections/services/TrackRecords.svelte';
+	import Portfolio from '$lib/components/sections/services/Portfolio.svelte';
+	import Projects from '$lib/components/sections/home/Projects.svelte';
+	import ContactUs from '$lib/components/sections/home/ContactUs.svelte';
 </script>
 
-<div class="pb-20">
+<div>
 	<Hero />
 	<Overview />
 	<img src={divider} alt="Divider" />
@@ -16,4 +20,8 @@
 	<Methodology />
 	<Gallery />
 	<Clients />
+	<TrackRecords />
+	<Portfolio />
+	<Projects />
+	<ContactUs />
 </div>

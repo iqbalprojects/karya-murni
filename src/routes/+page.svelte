@@ -11,10 +11,11 @@
 	import Hero from '$lib/components/ui/Hero.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
+	import Clients from '$lib/components/ui/Clients.svelte';
 </script>
 
 <div>
-	<Hero aspectRatio="aspect-video" backgroundImage={heroBackground}>
+	<Hero backgroundImage={heroBackground} class="aspect-video">
 		<div class="space-y-4 font-faculty-glyphic">
 			<Section>KARYA MURNI GROUP</Section>
 			<h1 class="text-4xl leading-tight md:text-6xl lg:text-[76px]">
@@ -26,12 +27,11 @@
 			<Button class="bg-white/20">View Projects</Button>
 		</div>
 	</Hero>
-	<div class="container mx-auto">
-		<Services />
-		<AboutUs />
-	</div>
+	<Services />
+	<AboutUs />
 	<img src={divider} alt="Divider" />
 	<Projects />
+	<Clients />
 	<TrackRecords />
 	<News />
 	<ContactUs />

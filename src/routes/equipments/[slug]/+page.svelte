@@ -1,6 +1,11 @@
 <script>
+	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index.js';
+	import * as Pagination from '$lib/components/ui/pagination/index.js';
+	import { page } from '$app/stores';
+
 	let activeType = $state('All Units');
-	let visibleCount = $state(9);
+	let currentPage = $state(1);
+	const itemsPerPage = 9;
 	import excavator from '$lib/assets/images/excavator.jpeg';
 	import excavator2 from '$lib/assets/images/excavator2.jpeg';
 	import excavator3 from '$lib/assets/images/excavator3.jpeg';
@@ -252,22 +257,35 @@
 	];
 
 	const activeUnits = $derived(types.find((t) => t.title === activeType)?.unit ?? []);
-	const visibleUnits = $derived(activeUnits.slice(0, visibleCount));
-	const hasMore = $derived(activeUnits.length > visibleCount);
+	const totalPages = $derived(Math.ceil(activeUnits.length / itemsPerPage));
+	const startIndex = $derived((currentPage - 1) * itemsPerPage);
+	const endIndex = $derived(startIndex + itemsPerPage);
+	const visibleUnits = $derived(activeUnits.slice(startIndex, endIndex));
 
-	function loadMore() {
-		visibleCount += 9;
-	}
-
-	// Reset visibleCount when activeType changes
+	// Reset currentPage when activeType changes
 	$effect(() => {
 		activeType;
-		visibleCount = 9;
+		currentPage = 1;
 	});
 </script>
 
 <div class="container mx-auto mt-16 mb-[100px] space-y-[60px] px-20">
-	<section class="space-y-4">
+	<Breadcrumb.Root>
+		<Breadcrumb.List>
+			<Breadcrumb.Item>
+				<Breadcrumb.Link href="/">Home</Breadcrumb.Link>
+			</Breadcrumb.Item>
+			<Breadcrumb.Separator />
+			<Breadcrumb.Item>
+				<Breadcrumb.Link href="/equipments">Equipments</Breadcrumb.Link>
+			</Breadcrumb.Item>
+			<Breadcrumb.Separator />
+			<Breadcrumb.Item>
+				<Breadcrumb.Page class="capitalize">{$page.params.slug}</Breadcrumb.Page>
+			</Breadcrumb.Item>
+		</Breadcrumb.List>
+	</Breadcrumb.Root>
+	<section class="max-w-[737px] space-y-4">
 		<h1 class="font-faculty-glyphic text-5xl">250 Unit Excavator</h1>
 		<p class="text-lg text-gray-600">
 			Offered in multiple sizes and configurations, they are designed for simple operation,
@@ -297,11 +315,19 @@
 						<img src={unit.image} alt={unit.name} class="px-[73px] py-[66px]" />
 						<div class="mb-7 space-y-4 text-start">
 							<h3 class="font-semibold">{unit.name}</h3>
-							<ul class="grid grid-cols-2">
-								<li>Net Power: {unit.netPower}</li>
-								<li>Dig Depth: {unit.digDepth}</li>
-								<li>Operating Weight: {unit.operatingWeight}</li>
-								<li>Fuel Type: {unit.fuelType}</li>
+							<ul class="grid grid-cols-2 gap-x-4 gap-y-4">
+								<li class="flex flex-col gap-0.5 text-sm font-medium text-gray-500">
+									Net Power <span class="text-base text-black">{unit.netPower}</span>
+								</li>
+								<li class="flex flex-col gap-0.5 text-sm font-medium text-gray-500">
+									Dig Depth <span class="text-base text-black">{unit.digDepth}</span>
+								</li>
+								<li class="flex flex-col gap-0.5 text-sm font-medium text-gray-500">
+									Operating Weight <span class="text-base text-black">{unit.operatingWeight}</span>
+								</li>
+								<li class="flex flex-col gap-0.5 text-sm font-medium text-gray-500">
+									Fuel Type <span class="text-base text-black">{unit.fuelType}</span>
+								</li>
 							</ul>
 						</div>
 						<Button href="" class="flex w-fit items-center bg-[#213A5C]"
@@ -312,11 +338,41 @@
 				{/each}
 			</ul>
 		</div>
-		{#if hasMore}
-			<button
-				onclick={loadMore}
-				class="cursor-pointer rounded-md bg-black/5 px-[18px] py-2.5 font-medium">Load more</button
+		{#if totalPages > 1}
+			<Pagination.Root
+				count={activeUnits.length}
+				perPage={itemsPerPage}
+				page={currentPage}
+				onPageChange={(newPage) => (currentPage = newPage)}
 			>
+				{#snippet children({ pages, currentPage: paginationCurrentPage })}
+					<Pagination.Content>
+						<Pagination.Item>
+							<Pagination.Previous class="cursor-pointer" />
+						</Pagination.Item>
+						{#each pages as page (page.key)}
+							{#if page.type === 'ellipsis'}
+								<Pagination.Item>
+									<Pagination.Ellipsis />
+								</Pagination.Item>
+							{:else}
+								<Pagination.Item>
+									<Pagination.Link
+										class="cursor-pointer"
+										{page}
+										isActive={paginationCurrentPage === page.value}
+									>
+										{page.value}
+									</Pagination.Link>
+								</Pagination.Item>
+							{/if}
+						{/each}
+						<Pagination.Item>
+							<Pagination.Next class="cursor-pointer" />
+						</Pagination.Item>
+					</Pagination.Content>
+				{/snippet}
+			</Pagination.Root>
 		{/if}
 	</section>
 </div>

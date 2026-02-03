@@ -26,7 +26,7 @@
 	];
 </script>
 
-<Marquee fade={true} innerClassName="h-[52px] space-x-14">
+<Marquee fade={true} innerClassName="h-[52px] space-x-14 mb-20">
 	{#each clients as client}
 		<img src={client.logo} alt={client.name} class="object-contain" />
 	{/each}

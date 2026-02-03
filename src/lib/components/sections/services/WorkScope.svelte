@@ -30,8 +30,17 @@
 	</div>
 	<ul class="grid grid-cols-4 gap-2">
 		{#each workScopeItems as item}
-			<li class="relative">
-				<img src={item.image} alt={item.title} class="aspect-video rounded-sm" />
+			<li class="relative overflow-hidden rounded-sm">
+				<img src={item.image} alt={item.title} class="aspect-video" />
+				<!-- Progressive blur -->
+				<div
+					class="absolute inset-x-0 top-1/6 bottom-0 backdrop-blur-sm"
+					style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
+				></div>
+				<!-- Gradient overlay -->
+				<div
+					class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"
+				></div>
 				<p class="absolute bottom-[30px] left-6 font-faculty-glyphic text-2xl text-white">
 					{item.title}
 				</p>
