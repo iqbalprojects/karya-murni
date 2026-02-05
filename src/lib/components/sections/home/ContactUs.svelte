@@ -4,12 +4,12 @@
 </script>
 
 <section
-	class="relative grid aspect-3/1 place-content-center gap-y-9 bg-cover bg-center bg-no-repeat text-center before:absolute before:inset-0 before:bg-[linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),linear-gradient(180deg,rgba(0,0,0,0)_26.04%,rgba(0,0,0,0.7)_74.22%)]"
+	class="relative grid aspect-square place-content-center gap-y-7 bg-cover bg-center bg-no-repeat px-5 text-center before:absolute before:inset-0 before:bg-[linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),linear-gradient(180deg,rgba(0,0,0,0)_26.04%,rgba(0,0,0,0.7)_74.22%)] lg:aspect-3/1 lg:gap-y-9 lg:p-20"
 	style="background-image: url({contactUsBackground})"
 >
-	<div class="relative z-10 max-w-[738px] space-y-5 text-white">
-		<h2 class="font-faculty-glyphic text-5xl">Ready to Start Your Project?</h2>
-		<p class="text-xl font-medium">
+	<div class="relative z-10 max-w-[738px] space-y-3 text-white lg:space-y-5">
+		<h2 class="font-faculty-glyphic text-4xl lg:text-5xl">Ready to Start Your Project?</h2>
+		<p class="font-medium lg:text-xl">
 			Get in touch with our team to discuss your requirements and explore how we can support your
 			estate development needs
 		</p>

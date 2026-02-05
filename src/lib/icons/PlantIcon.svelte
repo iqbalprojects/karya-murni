@@ -1,4 +1,16 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+	let { size = 48, class: className = '', ...restProps } = $props();
+</script>
+
+<svg
+	width={size}
+	height={size}
+	viewBox="0 0 48 48"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	class={className}
+	{...restProps}
+>
 	<mask id="path-1-inside-1_1_677" fill="white">
 		<path
 			d="M24 28.6668V14.0002C24 8.1095 19.224 3.3335 13.3333 3.3335H9.99998C9.93331 7.3655 11.9386 11.0988 15.2773 13.0668C19.24 15.4028 23.3146 14.2135 24 14.0002"

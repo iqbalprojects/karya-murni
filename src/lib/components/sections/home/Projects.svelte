@@ -36,11 +36,11 @@
 	];
 </script>
 
-<section class="container mx-auto grid grid-cols-5 gap-x-[53px] px-20 py-20">
-	<div class="col-span-2 max-w-md space-y-9">
+<section class="container mx-auto grid gap-y-10 px-5 py-12 lg:grid-cols-5 lg:gap-x-[53px] lg:p-20">
+	<div class="col-span-2 space-y-9 lg:max-w-md">
 		<div class="space-y-3">
 			<Section variant="primary">Projects</Section>
-			<h2 class="font-faculty-glyphic text-5xl leading-[115%]">
+			<h2 class="font-faculty-glyphic text-4xl leading-[115%] lg:text-5xl">
 				Delivering Results Across Indonesia
 			</h2>
 		</div>
@@ -48,11 +48,13 @@
 	</div>
 	<ul class="col-span-3 divide-y divide-gray-300">
 		{#each projects as project, index}
-			<li class="grid grid-cols-10 py-9">
-				<p class="col-span-1 text-lg font-medium text-gray-600">0{index + 1}</p>
-				<h3 class="col-span-4 text-lg font-semibold">{project.company}</h3>
-				<p class="col-span-3 text-lg font-medium text-gray-600">{project.location}</p>
-				<p class="col-span-2 text-lg font-medium text-gray-600">{project.project}</p>
+			<li class="grid grid-cols-10 gap-x-5 py-6 lg:gap-x-10 lg:py-9">
+				<p class="col-span-1 text-sm font-medium text-gray-600 lg:text-lg">0{index + 1}</p>
+				<h3 class="col-span-3 text-sm font-semibold lg:col-span-4 lg:text-lg">{project.company}</h3>
+				<p class="col-span-3 text-sm font-medium text-gray-600 lg:text-lg">{project.location}</p>
+				<p class="col-span-3 text-sm font-medium text-gray-600 lg:col-span-2 lg:text-lg">
+					{project.project}
+				</p>
 			</li>
 		{/each}
 	</ul>

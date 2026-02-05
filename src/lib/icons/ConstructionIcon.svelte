@@ -1,17 +1,25 @@
 <script>
-	let { size = 48, color = '#0C111D', fillOpacity = 0.3 } = $props();
+	let { size = 48, color = '#0C111D', class: className = '', ...restProps } = $props();
 </script>
 
-<svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	width={size}
+	height={size}
+	viewBox="0 0 48 48"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	class={className}
+	{...restProps}
+>
 	<path
 		d="M40.6667 28.6666H32.6667C31.9307 28.6666 31.3334 29.2637 31.3334 30V34C31.3334 34.7362 31.9307 35.3333 32.6667 35.3333H40.6667C41.4027 35.3333 42 34.7362 42 34V30C42 29.2637 41.4027 28.6666 40.6667 28.6666Z"
 		fill={color}
-		fill-opacity={fillOpacity}
+		fill-opacity="0.3"
 	/>
 	<path
 		d="M12.6667 43.3333V5.99996C12.6667 5.26396 13.2641 4.66663 14.0001 4.66663H20.6667C21.4027 4.66663 22.0001 5.26396 22.0001 5.99996V43.3333"
 		fill={color}
-		fill-opacity={fillOpacity}
+		fill-opacity="0.3"
 	/>
 	<path
 		d="M40.6667 28.6666H32.6667C31.9307 28.6666 31.3334 29.2637 31.3334 30V34C31.3334 34.7362 31.9307 35.3333 32.6667 35.3333H40.6667C41.4027 35.3333 42 34.7362 42 34V30C42 29.2637 41.4027 28.6666 40.6667 28.6666Z"

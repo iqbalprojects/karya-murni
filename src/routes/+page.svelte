@@ -15,10 +15,10 @@
 </script>
 
 <div>
-	<Hero backgroundImage={heroBackground} class="aspect-video">
+	<Hero backgroundImage={heroBackground} class="aspect-[9/19.5] bg-center lg:aspect-video">
 		<div class="space-y-4 font-faculty-glyphic">
 			<Section>KARYA MURNI GROUP</Section>
-			<h1 class="text-4xl leading-tight md:text-6xl lg:text-[76px]">
+			<h1 class="text-5xl leading-tight lg:text-[76px]">
 				Leading Palm Estate Contractor Since 1981
 			</h1>
 		</div>
@@ -29,7 +29,7 @@
 	</Hero>
 	<Services />
 	<AboutUs />
-	<img src={divider} alt="Divider" />
+	<img src={divider} alt="Divider" class="h-5 w-full object-cover" />
 	<Projects />
 	<Clients />
 	<TrackRecords />
