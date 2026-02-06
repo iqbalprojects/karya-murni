@@ -11,17 +11,17 @@
 			title: 'Company',
 			items: [
 				{ title: 'About', href: '/about' },
-				{ title: 'Services', href: '/blog' },
-				{ title: 'Certifications', href: '/store-location' },
-				{ title: 'News', href: '/terms-conditions' }
+				{ title: 'Services', href: '/services' },
+				{ title: 'Certifications', href: '/certifications' },
+				{ title: 'News', href: '/news' }
 			]
 		},
 		{
 			title: 'Services',
 			items: [
-				{ title: 'Replanting', href: '/' },
-				{ title: 'Land Clearing', href: '/' },
-				{ title: 'Other Services', href: '/' }
+				{ title: 'Replanting', href: '/replanting' },
+				{ title: 'Land Clearing', href: '/land-clearing' },
+				{ title: 'Other Services', href: '/others' }
 			]
 		}
 	];

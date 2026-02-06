@@ -11,7 +11,10 @@
 </script>
 
 <div>
-	<Hero backgroundImage={heroBackground} class="aspect-[2.77/1] bg-bottom">
+	<Hero
+		backgroundImage={heroBackground}
+		class="aspect-9/16 [background-position-x:-10rem] lg:aspect-[2.77/1] lg:bg-bottom"
+	>
 		<div class="space-y-4 font-faculty-glyphic">
 			<h1 class="text-4xl leading-tight md:text-6xl lg:text-[76px]">About Us</h1>
 		</div>

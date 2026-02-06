@@ -334,9 +334,11 @@
 			<ul class="grid border-[0.5px] lg:grid-cols-3">
 				{#each visibleUnits as unit}
 					<li class="border-[0.5px] bg-white px-7 pb-7">
-						<img src={unit.image} alt={unit.name} class="px-[73px] py-[66px]" />
+						<div class="grid h-[272px] place-content-center px-12 lg:h-[320px] lg:px-[73px]">
+							<img src={unit.image} alt={unit.name} />
+						</div>
 						<div class="mb-7 space-y-4 text-start">
-							<h3 class="font-semibold">{unit.name}</h3>
+							<h3 class="text-lg font-semibold lg:text-xl">{unit.name}</h3>
 							<ul class="grid grid-cols-2 gap-x-4 gap-y-4">
 								<li class="flex flex-col gap-0.5 text-sm font-medium text-gray-500">
 									Net Power <span class="text-base text-black">{unit.netPower}</span>
@@ -352,8 +354,8 @@
 								</li>
 							</ul>
 						</div>
-						<Button href="" class="flex w-fit items-center bg-[#213A5C]"
-							><span class="flex items-center text-white">View all units <ChevronIcon /></span
+						<Button href="" class="flex w-full items-center justify-center bg-[#213A5C] lg:w-fit"
+							><span class="flex items-center text-white">Ask for details <ChevronIcon /></span
 							></Button
 						>
 					</li>

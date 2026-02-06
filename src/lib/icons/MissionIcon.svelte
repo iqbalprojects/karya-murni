@@ -1,4 +1,16 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+	let { size = 40, class: className = '', ...restProps } = $props();
+</script>
+
+<svg
+	width={size}
+	height={size}
+	viewBox="0 0 40 40"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	class={className}
+	{...restProps}
+>
 	<path
 		opacity="0.3"
 		d="M29.4447 6.11108H10.5558C8.10111 6.11108 6.11133 8.10086 6.11133 10.5555V29.4444C6.11133 31.8991 8.10111 33.8889 10.5558 33.8889H29.4447C31.8993 33.8889 33.8891 31.8991 33.8891 29.4444V10.5555C33.8891 8.10086 31.8993 6.11108 29.4447 6.11108Z"

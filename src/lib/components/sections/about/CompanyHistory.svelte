@@ -4,17 +4,17 @@
 </script>
 
 <section class="relative">
-	<div class="absolute bottom-0 left-0 z-0 h-[518px]">
+	<div class="absolute bottom-0 left-0 z-0 hidden h-[518px] lg:block">
 		<img src={kmpLeft} alt="Karya Murni" class="h-full w-full object-contain" />
 	</div>
-	<div class="container mx-auto grid grid-cols-2 p-20">
+	<div class="container mx-auto grid gap-y-10 px-5 py-12 lg:grid-cols-2 lg:p-20">
 		<div class="max-w-[582px] space-y-3">
 			<Section variant="primary">Company History</Section>
-			<h2 class="font-faculty-glyphic text-5xl leading-[115%]">
+			<h2 class="font-faculty-glyphic text-4xl leading-[115%] lg:text-5xl">
 				Four Decades of Sustainable Land Development
 			</h2>
 		</div>
-		<div class="space-y-5 text-xl leading-[30px]">
+		<div class="space-y-5 leading-[30px] lg:text-xl">
 			<p>
 				Founded in 1981, our company embarked on its journey as a palm estate contractor, partnering
 				with leading organizations such as SIPEF, PERKEBUNAN NUSANTARA, and LONSUM. In the early

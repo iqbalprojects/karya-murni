@@ -72,47 +72,59 @@
 			<Sheet.Trigger class={`p-2 ${isEquipmentDetail ? 'text-black' : 'text-white'}`}>
 				<MenuIcon />
 			</Sheet.Trigger>
-			<Sheet.Content side="right" class="w-[300px] sm:w-[400px]">
-				<Sheet.Header>
-					<Sheet.Title>Navigation</Sheet.Title>
-					<Sheet.Description>Choose where you'd like to go</Sheet.Description>
+			<Sheet.Content
+				side="right"
+				class="w-[85vw] max-w-[400px] border-[#0C111D] bg-[#0C111D] text-white"
+			>
+				<Sheet.Header class="border-b border-white/10 pb-4">
+					<Sheet.Title class="text-left font-faculty-glyphic text-2xl text-white">Menu</Sheet.Title>
+					<Sheet.Description class="text-left text-sm text-gray-400">
+						Navigate to your destination
+					</Sheet.Description>
 				</Sheet.Header>
-				<div class="mt-6 space-y-4">
-					{#each navLinks as link}
-						<div class="space-y-2">
-							{#if 'subLinks' in link}
-								<div class="space-y-2">
+				<nav class="mt-8">
+					<ul class="space-y-1">
+						{#each navLinks as link}
+							<li>
+								{#if 'subLinks' in link}
+									<!-- Parent link with sublinks -->
+									<div class="space-y-1">
+										<a
+											href={resolve(link.href)}
+											class="block rounded-lg px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10"
+											onclick={closeSheet}
+										>
+											{link.label}
+										</a>
+										<!-- Sublinks -->
+										<ul class="ml-4 space-y-1 border-l-4 border-white/20">
+											{#each link.subLinks as subLink}
+												<li>
+													<a
+														href={`${link.href}${subLink.href}`}
+														class="block rounded-lg px-4 py-2.5 font-medium text-gray-400 transition-colors hover:bg-white/10 hover:text-white"
+														onclick={closeSheet}
+													>
+														{subLink.label}
+													</a>
+												</li>
+											{/each}
+										</ul>
+									</div>
+								{:else}
+									<!-- Regular link -->
 									<a
 										href={resolve(link.href)}
-										class="block text-lg font-medium hover:text-primary"
+										class="block rounded-lg px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10"
 										onclick={closeSheet}
 									>
 										{link.label}
 									</a>
-									<div class="ml-4 space-y-2">
-										{#each link.subLinks as subLink}
-											<a
-												href={`${link.href}${subLink.href}`}
-												class="block text-sm text-gray-600 hover:text-primary"
-												onclick={closeSheet}
-											>
-												{subLink.label}
-											</a>
-										{/each}
-									</div>
-								</div>
-							{:else}
-								<a
-									href={resolve(link.href)}
-									class="block text-lg font-medium hover:text-primary"
-									onclick={closeSheet}
-								>
-									{link.label}
-								</a>
-							{/if}
-						</div>
-					{/each}
-				</div>
+								{/if}
+							</li>
+						{/each}
+					</ul>
+				</nav>
 			</Sheet.Content>
 		</Sheet.Root>
 	</div>
