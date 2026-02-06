@@ -41,7 +41,9 @@
 				<div
 					class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"
 				></div>
-				<p class="absolute bottom-[30px] left-6 font-faculty-glyphic text-2xl text-white">
+				<p
+					class="absolute bottom-4 left-4 max-w-[140.5px] font-faculty-glyphic text-xl text-white lg:bottom-[30px] lg:left-6 lg:text-2xl"
+				>
 					{item.title}
 				</p>
 			</li>

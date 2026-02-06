@@ -45,7 +45,7 @@
 			<ul class="absolute bottom-6 left-6 w-full space-y-2">
 				{#each abouts as about}
 					<li
-						class="flex w-4/6 items-center gap-x-1.5 rounded-sm bg-gray-950 p-3.5 font-faculty-glyphic text-sm text-white first:w-fit last:w-5/6 lg:gap-x-3 lg:px-6 lg:py-5 lg:text-[22px]"
+						class="flex w-3/4 items-center gap-x-1.5 rounded-sm bg-gray-950 p-3.5 font-faculty-glyphic text-sm text-white first:w-fit last:w-5/6 lg:gap-x-3 lg:px-6 lg:py-5 lg:text-[22px]"
 					>
 						<DiamondIcon class="h-2 w-2 lg:h-3.5 lg:w-3.5" />
 						{about}
