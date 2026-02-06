@@ -45,11 +45,11 @@
 	</div>
 	<ul class="flex flex-col items-center justify-between space-y-3 lg:flex-row!">
 		{#each achievements as achievement}
-			<li class="w-full space-y-8 bg-gray-100 p-7 lg:max-w-[314px]">
-				<p class="font-faculty-glyphic text-7xl">{achievement.value}</p>
+			<li class="w-full space-y-5 bg-gray-100 p-6 lg:max-w-[314px] lg:space-y-8 lg:p-7">
+				<p class="font-faculty-glyphic text-4xl lg:text-[56px]">{achievement.value}</p>
 				<div class="space-y-2">
 					<h3 class="font-semibold">{achievement.title}</h3>
-					<p class="text-gray-400">{achievement.description}</p>
+					<p class="text-gray-500">{achievement.description}</p>
 				</div>
 			</li>
 		{/each}

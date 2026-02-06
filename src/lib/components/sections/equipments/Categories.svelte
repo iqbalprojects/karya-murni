@@ -19,25 +19,31 @@
 	];
 </script>
 
-<section class="container mx-auto space-y-[60px] p-20">
-	<div class="grid grid-cols-2">
+<section class="container mx-auto space-y-10 px-5 py-12 lg:space-y-[60px] lg:p-20">
+	<div class="grid gap-y-5 lg:grid-cols-2">
 		<div class="space-y-4">
-			<h3 class="font-faculty-glyphic text-5xl">Categories</h3>
-			<p class="text-lg text-gray-600">
-				Our operations are supported by a robust fleet of 500+ heavy machinery units, maintained
-				regularly to ensure performance, safety, and productivity in the field.
+			<h3 class="font-faculty-glyphic text-4xl lg:text-5xl">Categories</h3>
+			<p class="text-base text-gray-600 lg:text-lg">
+				Our operations are supported by a robust fleet of <b>500+ heavy machinery units</b>,
+				maintained regularly to ensure performance, safety, and productivity in the field.
 			</p>
 		</div>
-		<div class="flex items-end justify-end">
+		<div class="flex lg:items-end lg:justify-end">
 			<Button variant="primary"
 				><span class="flex items-center">View all units <ChevronIcon /></span></Button
 			>
 		</div>
 	</div>
-	<ul class="grid grid-cols-3 border-[0.5px]">
+	<ul class="grid border-[0.5px] lg:grid-cols-3">
 		{#each categories as category}
 			<li class="group relative h-[368px] border-[0.5px] bg-white p-7">
-				<!-- Overlay -->
+				<!-- Mobile clickable overlay -->
+				<a
+					href="{page.url.pathname}/{category.href}"
+					class="absolute inset-0 z-20 lg:hidden"
+					aria-label="View {category.name} units"
+				></a>
+				<!-- Hover overlay -->
 				<div
 					class="pointer-events-none absolute inset-0 bg-[#0000000D] opacity-0 transition-opacity group-hover:opacity-100"
 				></div>

@@ -1,7 +1,8 @@
 <script>
+	import * as Select from '$lib/components/ui/select/index.js';
 	import * as Breadcrumb from '$lib/components/ui/breadcrumb/index.js';
 	import * as Pagination from '$lib/components/ui/pagination/index.js';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let activeType = $state('All Units');
 	let currentPage = $state(1);
@@ -269,7 +270,7 @@
 	});
 </script>
 
-<div class="container mx-auto mt-16 mb-[100px] space-y-[60px] px-20">
+<div class="container mx-auto mt-16 mb-[100px] space-y-[60px] px-5 lg:px-20">
 	<Breadcrumb.Root>
 		<Breadcrumb.List>
 			<Breadcrumb.Item>
@@ -281,7 +282,7 @@
 			</Breadcrumb.Item>
 			<Breadcrumb.Separator />
 			<Breadcrumb.Item>
-				<Breadcrumb.Page class="capitalize">{$page.params.slug}</Breadcrumb.Page>
+				<Breadcrumb.Page class="capitalize">{page.params.slug}</Breadcrumb.Page>
 			</Breadcrumb.Item>
 		</Breadcrumb.List>
 	</Breadcrumb.Root>
@@ -295,7 +296,28 @@
 	</section>
 	<section class="space-y-[70px] text-center">
 		<div class="space-y-7">
-			<ul class="grid grid-cols-5 gap-x-2">
+			<!-- Mobile Select -->
+			<Select.Root
+				type="single"
+				value={activeType}
+				onValueChange={(value) => {
+					if (value) activeType = value;
+				}}
+			>
+				<Select.Trigger class="w-full rounded-none lg:hidden">
+					{activeType}
+				</Select.Trigger>
+				<Select.Content class="rounded-none">
+					{#each types as type}
+						<Select.Item value={type.title} label={type.title} class="rounded-none">
+							{type.title}
+						</Select.Item>
+					{/each}
+				</Select.Content>
+			</Select.Root>
+
+			<!-- Desktop Tabs -->
+			<ul class="hidden grid-cols-5 gap-x-2 lg:grid">
 				{#each types as type}
 					<li>
 						<button
@@ -309,7 +331,7 @@
 					</li>
 				{/each}
 			</ul>
-			<ul class="grid grid-cols-3 border-[0.5px]">
+			<ul class="grid border-[0.5px] lg:grid-cols-3">
 				{#each visibleUnits as unit}
 					<li class="border-[0.5px] bg-white px-7 pb-7">
 						<img src={unit.image} alt={unit.name} class="px-[73px] py-[66px]" />
