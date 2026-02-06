@@ -26,14 +26,16 @@
 	];
 </script>
 
-<section class="container mx-auto space-y-20 p-20">
-	<div class="flex justify-between">
-		<div class="w-full max-w-[436px]">
+<section class="container mx-auto space-y-20 px-5 py-12 lg:p-20">
+	<div class="flex flex-col justify-between gap-y-[52px] lg:flex-row!">
+		<div class="w-full max-w-[353px] space-y-3 lg:max-w-[436px]">
 			<Section variant="primary">Why Choose Us</Section>
-			<h2 class="font-faculty-glyphic text-[52px] leading-[115%]">Proven Track Records</h2>
+			<h2 class="font-faculty-glyphic text-4xl leading-[115%] lg:text-[52px]">
+				Proven Track Records
+			</h2>
 		</div>
-		<div class="w-full max-w-[630px] space-y-5">
-			<p class="font-faculty-glyphic text-2xl">
+		<div class="w-full max-w-[630px] space-y-4 lg:space-y-5">
+			<p class="font-faculty-glyphic text-xl lg:text-2xl">
 				“Karya Murni handled a very challenging clearing site for us, and the professionalism they
 				demonstrated was exceptional. The land clearing work was thorough, well-coordinated, and
 				completed exactly as scheduled. Professional team and reliable results.”
@@ -41,9 +43,9 @@
 			<p class="text-gray-400">Petro Betrand, Director at PT HM Sampoerna Tbk.</p>
 		</div>
 	</div>
-	<ul class="flex items-center justify-between">
+	<ul class="flex flex-col items-center justify-between space-y-3 lg:flex-row!">
 		{#each achievements as achievement}
-			<li class="max-w-[314px] space-y-8 bg-gray-100 p-7">
+			<li class="w-full space-y-8 bg-gray-100 p-7 lg:max-w-[314px]">
 				<p class="font-faculty-glyphic text-7xl">{achievement.value}</p>
 				<div class="space-y-2">
 					<h3 class="font-semibold">{achievement.title}</h3>

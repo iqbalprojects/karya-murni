@@ -93,9 +93,9 @@
 		>
 			<p>© 2025 Karya Murni Group. All Rights Reserved.</p>
 			<ul class="flex items-center gap-x-4">
-				<li><a href="#">Privacy Policy </a></li>
+				<li><a href="/privacy-policy">Privacy Policy </a></li>
 				<li>•</li>
-				<li><a href="#">Terms & Conditions </a></li>
+				<li><a href="/terms-conditions">Terms & Conditions </a></li>
 			</ul>
 		</div>
 	</div>

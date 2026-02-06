@@ -9,23 +9,23 @@
 	];
 </script>
 
-<section class="container mx-auto grid grid-cols-2 gap-x-[130px] p-20">
-	<div class="space-y-5">
-		<h2 class="font-faculty-glyphic text-5xl">Overview</h2>
-		<p class="text-lg text-gray-950">
+<section class="container mx-auto grid gap-x-[130px] gap-y-10 px-5 py-12 lg:grid-cols-2 lg:p-20">
+	<div class="space-y-4 lg:space-y-5">
+		<h2 class="font-faculty-glyphic text-4xl lg:text-5xl">Overview</h2>
+		<p class="text-gray-950 lg:text-lg">
 			Our land clearing operations support estate development by removing vegetation, preparing
 			slopes, and establishing proper drainage systems. Each step is executed with precision to
 			ensure the land is stable, accessible, and ready for downstream activities such as replanting,
 			roadwork, or infrastructure development.
 		</p>
 	</div>
-	<div class="divide-y rounded-md bg-white p-7 drop-shadow-sm">
-		<h3 class="flex items-center gap-x-3 pb-7 font-faculty-glyphic text-[28px]">
-			<TreeIcon /> Key benefits
+	<div class="divide-y rounded-md bg-white p-6 drop-shadow-sm lg:p-7">
+		<h3 class="flex items-center gap-x-3 pb-6 font-faculty-glyphic text-2xl lg:pb-7 lg:text-[28px]">
+			<TreeIcon class="h-7 w-7 lg:h-12 lg:w-12" /> Key benefits
 		</h3>
-		<ul class="list-disc space-y-2 pt-7 pl-5 marker:text-[#0D26484D]">
+		<ul class="list-disc space-y-2 px-2 pt-7 marker:text-[#0D26484D]">
 			{#each benefits as benefit}
-				<li class="text-lg">{@html benefit}</li>
+				<li class="lg:text-lg">{@html benefit}</li>
 			{/each}
 		</ul>
 	</div>

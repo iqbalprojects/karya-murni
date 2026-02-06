@@ -29,22 +29,26 @@
 	];
 </script>
 
-<section>
+<section class="py-12 lg:py-10">
 	<Carousel.Root>
 		<Carousel.Content>
 			{#each portfolioItems as item}
-				<Carousel.Item class="md:basis-1/2">
+				<Carousel.Item class="basis-5/6 first:ml-5 last:mr-5 md:basis-1/2">
 					<div class="relative overflow-hidden rounded-sm">
-						<img src={item.image} alt={item.title} class="aspect-video h-full w-full rounded-sm" />
+						<img
+							src={item.image}
+							alt={item.title}
+							class="aspect-5/6 h-full w-full rounded-sm lg:aspect-video"
+						/>
 						<div
 							class="absolute inset-x-0 top-1/3 bottom-0 backdrop-blur-md"
 							style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
 						></div>
 						<div class="absolute bottom-5 left-5 max-w-3xl space-y-4 text-white">
-							<h4 class="font-faculty-glyphic text-xl">
+							<h4 class="font-faculty-glyphic text-lg lg:text-xl">
 								{item.title}
 							</h4>
-							<p class="font-medium text-white/60">{item.description}</p>
+							<p class="text-sm font-medium text-white/60 lg:text-base">{item.description}</p>
 						</div>
 					</div>
 				</Carousel.Item>

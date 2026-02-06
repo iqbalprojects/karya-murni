@@ -20,18 +20,18 @@
 	];
 </script>
 
-<section class="container mx-auto space-y-[60px] p-20">
+<section class="container mx-auto space-y-[52px] px-5 pt-12 pb-[60px] lg:space-y-[60px] lg:p-20">
 	<div class="max-w-[628px] space-y-4">
-		<h2 class="font-faculty-glyphic text-5xl">Work Scope</h2>
-		<p class="text-lg text-gray-600">
+		<h2 class="font-faculty-glyphic text-4xl lg:text-5xl">Work Scope</h2>
+		<p class="text-gray-600 lg:text-lg">
 			Our land clearing services cover the full range of preparatory tasks required for estate-grade
 			development:
 		</p>
 	</div>
-	<ul class="grid grid-cols-4 gap-2">
+	<ul class="grid grid-cols-2 gap-2 lg:grid-cols-4">
 		{#each workScopeItems as item}
 			<li class="relative overflow-hidden rounded-sm">
-				<img src={item.image} alt={item.title} class="aspect-video" />
+				<img src={item.image} alt={item.title} class="aspect-square object-cover lg:aspect-video" />
 				<!-- Progressive blur -->
 				<div
 					class="absolute inset-x-0 top-1/6 bottom-0 backdrop-blur-sm"
