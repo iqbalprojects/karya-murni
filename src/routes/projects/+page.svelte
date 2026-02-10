@@ -1,6 +1,6 @@
 <script>
 	import Projects from '$lib/components/sections/home/Projects.svelte';
-	import heroBackground from '$lib/assets/images/terracing.jpeg';
+	import heroBackground from '$lib/assets/images/terracing.webp';
 	import Hero from '$lib/components/ui/Hero.svelte';
 </script>
 

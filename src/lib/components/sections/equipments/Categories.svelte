@@ -2,12 +2,12 @@
 	import { page } from '$app/state';
 	import Button from '$lib/components/ui/Button.svelte';
 	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
-	import excavator from '$lib/assets/images/excavator.jpeg';
-	import bulldozers from '$lib/assets/images/bulldozers.jpeg';
-	import dumptruck from '$lib/assets/images/dumptruck.jpeg';
-	import grader from '$lib/assets/images/grader.jpeg';
-	import compactor from '$lib/assets/images/compactor.jpeg';
-	import tracktor from '$lib/assets/images/tracktor.jpeg';
+	import excavator from '$lib/assets/images/excavator.webp';
+	import bulldozers from '$lib/assets/images/bulldozers.webp';
+	import dumptruck from '$lib/assets/images/dumptruck.webp';
+	import grader from '$lib/assets/images/grader.webp';
+	import compactor from '$lib/assets/images/compactor.webp';
+	import tracktor from '$lib/assets/images/tracktor.webp';
 
 	const categories = [
 		{ name: 'Excavator', href: 'excavator', unit: 250, image: excavator },

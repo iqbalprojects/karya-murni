@@ -3,8 +3,8 @@
 	import InstagramIcon from '$lib/icons/InstagramIcon.svelte';
 	import LinkedInIcon from '$lib/icons/LinkedInIcon.svelte';
 	import XIcon from '$lib/icons/XIcon.svelte';
-	import sbpnLogo from '$lib/assets/images/sbpn-logo.png';
-	import kmpFlatLogo from '$lib/assets/images/kmp-flat-logo.png';
+	import sbpnLogo from '$lib/assets/images/sbpn-logo.webp';
+	import kmpFlatLogo from '$lib/assets/images/kmp-flat-logo.webp';
 
 	const links = [
 		{

@@ -1,16 +1,16 @@
 <script>
 	import { Marquee } from '@selemondev/svelte-marquee';
 	import '@selemondev/svelte-marquee/dist/style.css';
-	import wings from '$lib/assets/images/wings.png';
-	import sampoerna from '$lib/assets/images/sampoerna.png';
-	import gawi from '$lib/assets/images/gawi.png';
-	import wilmar from '$lib/assets/images/wilmar.png';
-	import bumitama from '$lib/assets/images/bumitama.png';
-	import saraswanti from '$lib/assets/images/saraswanti.png';
-	import sinarmas from '$lib/assets/images/sinarmas.png';
-	import fapagri from '$lib/assets/images/fapagri.png';
-	import minamas from '$lib/assets/images/minamas.png';
-	import agrindo from '$lib/assets/images/agrindo.png';
+	import wings from '$lib/assets/images/wings.webp';
+	import sampoerna from '$lib/assets/images/sampoerna.webp';
+	import gawi from '$lib/assets/images/gawi.webp';
+	import wilmar from '$lib/assets/images/wilmar.webp';
+	import bumitama from '$lib/assets/images/bumitama.webp';
+	import saraswanti from '$lib/assets/images/saraswanti.webp';
+	import sinarmas from '$lib/assets/images/sinarmas.webp';
+	import fapagri from '$lib/assets/images/fapagri.webp';
+	import minamas from '$lib/assets/images/minamas.webp';
+	import agrindo from '$lib/assets/images/agrindo.webp';
 
 	const clients = [
 		{ name: 'Wings', logo: wings },

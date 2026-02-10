@@ -1,6 +1,6 @@
 <script>
 	import Hero from '$lib/components/ui/Hero.svelte';
-	import heroBackground from '$lib/assets/images/hero-bg-equipments.jpeg';
+	import heroBackground from '$lib/assets/images/hero-bg-equipments.webp';
 	import Categories from '$lib/components/sections/equipments/Categories.svelte';
 	import Clients from '$lib/components/ui/Clients.svelte';
 	import TrackRecords from '$lib/components/sections/home/TrackRecords.svelte';

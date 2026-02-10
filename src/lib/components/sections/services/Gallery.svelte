@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import before from '$lib/assets/images/before.jpeg';
-	import after from '$lib/assets/images/after.jpeg';
+	import before from '$lib/assets/images/before.webp';
+	import after from '$lib/assets/images/after.webp';
 
 	const galleries = [
 		{

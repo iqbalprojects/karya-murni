@@ -1,6 +1,6 @@
 <script>
 	import Button from '$lib/components/ui/Button.svelte';
-	import contactUsBackground from '$lib/assets/images/contact-us-background.jpeg';
+	import contactUsBackground from '$lib/assets/images/contact-us-background.webp';
 </script>
 
 <section

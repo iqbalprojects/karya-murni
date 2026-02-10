@@ -1,6 +1,6 @@
 <script>
-	import kmpRight from '$lib/assets/images/kmp-right.png';
-	import rectangle from '$lib/assets/images/rectangle.png';
+	import kmpRight from '$lib/assets/images/kmp-right.webp';
+	import rectangle from '$lib/assets/images/rectangle.webp';
 
 	const achievements = [
 		{

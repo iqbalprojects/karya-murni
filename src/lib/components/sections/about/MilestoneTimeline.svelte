@@ -1,13 +1,13 @@
 <script>
 	import Section from '$lib/components/ui/Section.svelte';
-	import underbushing from '$lib/assets/images/underbushing.jpeg';
-	import felling from '$lib/assets/images/felling.jpeg';
-	import stacking from '$lib/assets/images/stacking.jpeg';
-	import terracing from '$lib/assets/images/terracing.jpeg';
-	import fieldDrain from '$lib/assets/images/field-drain.jpeg';
-	import boundaryDrain from '$lib/assets/images/boundary-drain.jpeg';
-	import makingBridge from '$lib/assets/images/making-bridge.jpeg';
-	import makingRoad from '$lib/assets/images/making-road.jpeg';
+	import underbushing from '$lib/assets/images/underbushing.webp';
+	import felling from '$lib/assets/images/felling.webp';
+	import stacking from '$lib/assets/images/stacking.webp';
+	import terracing from '$lib/assets/images/terracing.webp';
+	import fieldDrain from '$lib/assets/images/field-drain.webp';
+	import boundaryDrain from '$lib/assets/images/boundary-drain.webp';
+	import makingBridge from '$lib/assets/images/making-bridge.webp';
+	import makingRoad from '$lib/assets/images/making-road.webp';
 	import DiamondLargeIcon from '$lib/icons/DiamondLargeIcon.svelte';
 
 	const timelines = [

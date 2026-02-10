@@ -1,6 +1,6 @@
 <script>
-	import smk3Image from '$lib/assets/images/smk3.png';
-	import isoCertifiedImage from '$lib/assets/images/iso-certified.png';
+	import smk3Image from '$lib/assets/images/smk3.webp';
+	import isoCertifiedImage from '$lib/assets/images/iso-certified.webp';
 </script>
 
 <section

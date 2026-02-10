@@ -1,9 +1,9 @@
 <script>
-	import heroBackground from '$lib/assets/images/hero-bg-services.jpeg';
+	import heroBackground from '$lib/assets/images/hero-bg-services.webp';
 	import Hero from '$lib/components/ui/Hero.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
 	import Overview from '$lib/components/sections/services/Overview.svelte';
-	import divider from '$lib/assets/images/divider.png';
+	import divider from '$lib/assets/images/divider.webp';
 	import WorkScope from '$lib/components/sections/services/WorkScope.svelte';
 	import Methodology from '$lib/components/sections/services/Methodology.svelte';
 	import Gallery from '$lib/components/sections/services/Gallery.svelte';

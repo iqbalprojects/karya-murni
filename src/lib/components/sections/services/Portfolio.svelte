@@ -1,8 +1,8 @@
 <script>
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import portfolio1 from '$lib/assets/images/01.png';
-	import portfolio2 from '$lib/assets/images/02.png';
-	import portfolio3 from '$lib/assets/images/03.png';
+	import portfolio1 from '$lib/assets/images/01.webp';
+	import portfolio2 from '$lib/assets/images/02.webp';
+	import portfolio3 from '$lib/assets/images/03.webp';
 
 	const portfolioItems = [
 		{

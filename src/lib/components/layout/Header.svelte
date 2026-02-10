@@ -2,8 +2,8 @@
 	import { page } from '$app/state';
 	import Button from '$lib/components/ui/Button.svelte';
 	import Navbar from '$lib/components/layout/Navbar.svelte';
-	import sbpnLogo from '$lib/assets/images/sbpn-logo.png';
-	import kmpLogo from '$lib/assets/images/kmp-logo.png';
+	import sbpnLogo from '$lib/assets/images/sbpn-logo.webp';
+	import kmpLogo from '$lib/assets/images/kmp-logo.webp';
 
 	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
 

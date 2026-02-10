@@ -1,6 +1,6 @@
 <script>
 	import Section from '$lib/components/ui/Section.svelte';
-	import kmpLeft from '$lib/assets/images/kmp-left.png';
+	import kmpLeft from '$lib/assets/images/kmp-left.webp';
 </script>
 
 <section class="relative">

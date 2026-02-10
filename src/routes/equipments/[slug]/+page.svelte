@@ -7,9 +7,9 @@
 	let activeType = $state('All Units');
 	let currentPage = $state(1);
 	const itemsPerPage = 9;
-	import excavator from '$lib/assets/images/excavator.jpeg';
-	import excavator2 from '$lib/assets/images/excavator2.jpeg';
-	import excavator3 from '$lib/assets/images/excavator3.jpeg';
+	import excavator from '$lib/assets/images/excavator.webp';
+	import excavator2 from '$lib/assets/images/excavator2.webp';
+	import excavator3 from '$lib/assets/images/excavator3.webp';
 	import Button from '$lib/components/ui/Button.svelte';
 	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
 

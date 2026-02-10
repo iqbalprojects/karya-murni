@@ -1,7 +1,7 @@
 <script>
-	import Section from '../../ui/Section.svelte';
-	import about from '$lib/assets/images/about.jpeg';
-	import kmpLeft from '$lib/assets/images/kmp-left.png';
+	import Section from '$lib/components/ui/Section.svelte';
+	import about from '$lib/assets/images/about.webp';
+	import kmpLeft from '$lib/assets/images/kmp-left.webp';
 	import DiamondIcon from '$lib/icons/DiamondIcon.svelte';
 
 	const abouts = [

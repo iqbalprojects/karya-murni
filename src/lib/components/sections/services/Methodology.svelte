@@ -4,9 +4,9 @@
 	import LeafIcon from '$lib/icons/LeafIcon.svelte';
 	import MapIcon from '$lib/icons/MapIcon.svelte';
 	import StackIcon from '$lib/icons/StackIcon.svelte';
-	import rectangle from '$lib/assets/images/rectangle.png';
-	import kmpLeftMethodology from '$lib/assets/images/kmp-left-methodology.png';
-	import kmpRight from '$lib/assets/images/kmp-right.png';
+	import rectangle from '$lib/assets/images/rectangle.webp';
+	import kmpLeftMethodology from '$lib/assets/images/kmp-left-methodology.webp';
+	import kmpRight from '$lib/assets/images/kmp-right.webp';
 
 	const methods = [
 		{
