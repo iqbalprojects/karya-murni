@@ -26,11 +26,10 @@
 	];
 </script>
 
-<Marquee
-	fade={true}
-	innerClassName="h-11 lg:h-[52px] space-x-10 lg:space-x-14 mb-[60px] lg:mb-20 mt-10"
->
+<Marquee fade={true} innerClassName="mb-[60px] lg:mb-20 mt-10 flex items-center">
 	{#each clients as client}
-		<img src={client.logo} alt={client.name} class="object-contain" />
+		<div class="mr-10 flex h-11 w-auto shrink-0 items-center justify-center lg:mr-14 lg:h-[52px]">
+			<img src={client.logo} alt={client.name} class="h-full w-auto object-contain" />
+		</div>
 	{/each}
 </Marquee>
