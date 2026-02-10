@@ -32,6 +32,21 @@
 			company: 'SIPEF Group',
 			location: 'South Sumatra',
 			project: 'Land Clearing'
+		},
+		{
+			company: 'Bahana Karya Semesta',
+			location: 'Jambi',
+			project: 'Replanting'
+		},
+		{
+			company: 'Sampoerna Agro',
+			location: 'West Kalimantan',
+			project: 'Land Clearing'
+		},
+		{
+			company: 'SIPEF Group',
+			location: 'South Sumatra',
+			project: 'Land Clearing'
 		}
 	];
 </script>
