@@ -15,7 +15,7 @@
 		</p>
 	</div>
 	<div class="relative z-10 space-x-3">
-		<Button variant="secondary">Contact us</Button>
-		<Button class="bg-white/10 text-white">Request quote</Button>
+		<Button href="tel:+1234567890" variant="secondary">Contact us</Button>
+		<Button href="mailto:info@karyamurni.com" class="bg-white/10 text-white">Request quote</Button>
 	</div>
 </section>

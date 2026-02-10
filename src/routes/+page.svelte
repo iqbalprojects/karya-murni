@@ -23,8 +23,8 @@
 			</h1>
 		</div>
 		<div class="flex flex-wrap gap-3">
-			<Button variant="secondary">Our Services</Button>
-			<Button class="bg-white/20">View Projects</Button>
+			<Button href="/services/land-clearing" variant="secondary">Our Services</Button>
+			<Button href="/projects" class="bg-white/20">View Projects</Button>
 		</div>
 	</Hero>
 	<Services />

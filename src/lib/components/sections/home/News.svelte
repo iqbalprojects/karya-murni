@@ -26,7 +26,7 @@
 <section class="container mx-auto space-y-10 px-5 py-12 text-center lg:space-y-[60px] lg:p-20">
 	<div class="flex items-center justify-between">
 		<h2 class="font-faculty-glyphic text-5xl">Latest news</h2>
-		<Button variant="primary" class="hidden lg:block">View all projects</Button>
+		<Button href="/projects" variant="primary" class="hidden lg:block">View all projects</Button>
 	</div>
 	<ul class="grid border-[0.5px] text-start lg:grid-cols-3">
 		{#each news as item}
@@ -39,5 +39,5 @@
 			</li>
 		{/each}
 	</ul>
-	<Button variant="primary" class="lg:hidden">View all projects</Button>
+	<Button href="/projects" variant="primary" class="lg:hidden">View all projects</Button>
 </section>

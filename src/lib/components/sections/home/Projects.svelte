@@ -44,7 +44,7 @@
 				Delivering Results Across Indonesia
 			</h2>
 		</div>
-		<Button variant="primary">View all projects</Button>
+		<Button href="/projects" variant="primary">View all projects</Button>
 	</div>
 	<ul class="col-span-3 divide-y divide-gray-300">
 		{#each projects as project, index}

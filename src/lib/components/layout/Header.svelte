@@ -28,8 +28,8 @@
 		class="container mx-auto flex h-[64px] items-center justify-between px-5 lg:h-[72px] lg:px-20"
 	>
 		<a href="/" class="flex items-center gap-x-3">
-			<img src={sbpnLogo} alt="SBPN Logo" width="46" height="46" />
-			<img src={kmpLogo} alt="SBPN Logo" width="56.69" height="48" />
+			<img src={sbpnLogo} alt="SBPN Logo" class="h-[34.5px] w-[34.5px] lg:h-[46px] lg:w-[46px]" />
+			<img src={kmpLogo} alt="KMP Logo" class="h-9 w-[42.52px] lg:h-12 lg:w-[56.69px]" />
 		</a>
 		<Navbar />
 		<Button

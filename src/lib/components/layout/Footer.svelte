@@ -42,7 +42,7 @@
 			<div class="space-y-[25px] text-white">
 				<h2 class="font-faculty-glyphic">KARYA MURNI GROUP</h2>
 				<div class="flex items-center gap-x-5">
-					<img src={kmpFlatLogo} alt="SBPN Logo" width="67.53" height="52" />
+					<img src={kmpFlatLogo} alt="KMP Logo" width="67.53" height="52" />
 					<img src={sbpnLogo} alt="SBPN Logo" width="43.22" height="43.22" />
 				</div>
 			</div>
@@ -93,9 +93,9 @@
 		>
 			<p>© 2025 Karya Murni Group. All Rights Reserved.</p>
 			<ul class="flex items-center gap-x-4">
-				<li><a href="/privacy-policy">Privacy Policy </a></li>
+				<li><a href="/">Privacy Policy </a></li>
 				<li>•</li>
-				<li><a href="/terms-conditions">Terms & Conditions </a></li>
+				<li><a href="/">Terms & Conditions </a></li>
 			</ul>
 		</div>
 	</div>

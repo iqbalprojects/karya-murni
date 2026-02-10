@@ -11,19 +11,22 @@
 			title: 'Replanting',
 			badge: 'ZERO BURNING METHOD',
 			description:
-				'Sustainable land preparation using safe, zero-burn techniques to renew plantations efficiently while protecting soil quality and the surrounding environment'
+				'Sustainable land preparation using safe, zero-burn techniques to renew plantations efficiently while protecting soil quality and the surrounding environment',
+			link: '/'
 		},
 		{
 			icon: TreeIcon,
 			title: 'Land Clearing',
 			description:
-				'Comprehensive clearing services, from vegetation removal to site preparation, ensuring your land is ready for development with clean, organized, and structurally sound groundwork'
+				'Comprehensive clearing services, from vegetation removal to site preparation, ensuring your land is ready for development with clean, organized, and structurally sound groundwork',
+			link: '/land-clearing'
 		},
 		{
 			icon: ConstructionIcon,
 			title: 'Construction & Development',
 			description:
-				'End-to-end infrastructure development including roads, drainage, and structural works to support smooth operations and long-term project growth'
+				'End-to-end infrastructure development including roads, drainage, and structural works to support smooth operations and long-term project growth',
+			link: '/'
 		}
 	];
 </script>
@@ -54,7 +57,7 @@
 						<p class="text-sm text-gray-600 lg:text-base">{service.description}</p>
 					</div>
 					<a
-						href="/"
+						href={'/services' + service.link}
 						class="flex h-14 items-center gap-x-0.5 border-t border-t-black/10 py-2 text-sm font-medium lg:h-[60px] lg:text-base"
 						>Learn more <ChevronIcon /></a
 					>
