@@ -64,10 +64,20 @@
 	<ul class="col-span-3 divide-y divide-gray-300">
 		{#each projects as project, index}
 			<li class="grid grid-cols-10 gap-x-5 py-6 lg:gap-x-10 lg:py-9">
-				<p class="col-span-1 text-sm font-medium text-gray-600 lg:text-lg">0{index + 1}</p>
-				<h3 class="col-span-3 text-sm font-semibold lg:col-span-4 lg:text-lg">{project.company}</h3>
-				<p class="col-span-3 text-sm font-medium text-gray-600 lg:text-lg">{project.location}</p>
-				<p class="col-span-3 text-sm font-medium text-gray-600 lg:col-span-2 lg:text-lg">
+				<p class="col-span-1 text-xs font-medium text-gray-600 sm:text-sm lg:text-sm 2xl:text-lg">
+					0{index + 1}
+				</p>
+				<h3
+					class="col-span-3 text-xs font-semibold sm:text-sm lg:col-span-4 lg:text-sm 2xl:text-lg"
+				>
+					{project.company}
+				</h3>
+				<p class="col-span-3 text-xs font-medium text-gray-600 sm:text-sm lg:text-sm 2xl:text-lg">
+					{project.location}
+				</p>
+				<p
+					class="col-span-3 text-xs font-medium text-gray-600 sm:text-sm lg:col-span-2 lg:text-sm 2xl:text-lg"
+				>
 					{project.project}
 				</p>
 			</li>
