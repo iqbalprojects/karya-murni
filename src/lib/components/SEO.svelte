@@ -9,7 +9,7 @@
 			title: 'Karya Murni',
 			description: 'Your trusted partner in heavy equipment rentals and land clearing services.',
 			type: 'website',
-			image: '/kmp-logo.webp'
+			image: '/og-image.webp'
 		}
 	} = $props();
 
