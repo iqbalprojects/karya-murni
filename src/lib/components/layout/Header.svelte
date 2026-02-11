@@ -38,9 +38,8 @@
 			<Navbar />
 		</Animate>
 
-		<Animate variant="right">
-			<Button
-				class={`hidden lg:block ${isEquipmentDetail ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
+		<Animate variant="right" class="hidden lg:block">
+			<Button class={`${isEquipmentDetail ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
 				>Contact us</Button
 			>
 		</Animate>
