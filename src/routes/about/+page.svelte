@@ -8,7 +8,13 @@
 	import MilestoneTimeline from '$lib/components/sections/about/MilestoneTimeline.svelte';
 	import Clients from '$lib/components/ui/Clients.svelte';
 	import ContactUs from '$lib/components/sections/home/ContactUs.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+	title="About Us" 
+	description="Learn about our history, vision, mission, and our commitment to excellence in the heavy equipment and land clearing industry."
+/>
 
 <div>
 	<Hero

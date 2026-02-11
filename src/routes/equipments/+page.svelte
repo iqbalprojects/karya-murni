@@ -5,7 +5,13 @@
 	import Clients from '$lib/components/ui/Clients.svelte';
 	import TrackRecords from '$lib/components/sections/home/TrackRecords.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+	title="Equipments & Assets" 
+	description="Browse our extensive fleet of heavy machinery including excavators, bulldozers, and dump trucks available for rent."
+/>
 
 <div>
 	<Hero

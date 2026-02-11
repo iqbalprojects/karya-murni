@@ -13,7 +13,13 @@
 	import Projects from '$lib/components/sections/home/Projects.svelte';
 	import ContactUs from '$lib/components/sections/home/ContactUs.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+	title="Land Clearing Services" 
+	description="Professional land clearing services for plantation development, including underbrushing, felling, and stacking."
+/>
 
 <div>
 	<Hero

@@ -13,7 +13,14 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import Clients from '$lib/components/ui/Clients.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+	title="Home"
+	description="Leading Palm Estate Contractor Since 1981. We provide premium heavy equipment and expert land clearing services."
+	keywords="palm estate, contractor, heavy equipment, land clearing, karya murni, indonesia"
+/>
 
 <div>
 	<Hero backgroundImage={heroBackground} class="aspect-[9/19.5] bg-center lg:aspect-video">

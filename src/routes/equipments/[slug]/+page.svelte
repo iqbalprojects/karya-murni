@@ -13,6 +13,7 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	const types = [
 		{
@@ -270,6 +271,11 @@
 		currentPage = 1;
 	});
 </script>
+
+<SEO 
+	title="{page.params.slug ? page.params.slug.charAt(0).toUpperCase() + page.params.slug.slice(1) : 'Equipment Detail'} - Equipments"
+	description="Check out our {page.params.slug} available for rent at competitive prices." 
+/>
 
 <div class="container mx-auto mt-16 mb-[100px] space-y-[60px] px-5 lg:px-20">
 	<Animate variant="top">
