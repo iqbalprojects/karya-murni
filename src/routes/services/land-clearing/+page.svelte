@@ -12,6 +12,7 @@
 	import Portfolio from '$lib/components/sections/services/Portfolio.svelte';
 	import Projects from '$lib/components/sections/home/Projects.svelte';
 	import ContactUs from '$lib/components/sections/home/ContactUs.svelte';
+	import Animate from '$lib/components/ui/Animate.svelte';
 </script>
 
 <div>
@@ -20,8 +21,12 @@
 		class="aspect-9/16 bg-center lg:aspect-[2.77/1] lg:bg-top-left"
 	>
 		<div class="space-y-4 font-faculty-glyphic">
-			<Section>Our Services</Section>
-			<h1 class="text-5xl leading-tight lg:text-[76px]">Land Clearing</h1>
+			<Animate variant="top">
+				<Section>Our Services</Section>
+			</Animate>
+			<Animate variant="bottom">
+				<h1 class="text-5xl leading-tight lg:text-[76px]">Land Clearing</h1>
+			</Animate>
 		</div>
 	</Hero>
 	<Overview />

@@ -7,6 +7,7 @@
 	import boundaryDrain from '$lib/assets/images/boundary-drain.webp';
 	import makingBridge from '$lib/assets/images/making-bridge.webp';
 	import makingRoad from '$lib/assets/images/making-road.webp';
+	import Animate from '$lib/components/ui/Animate.svelte';
 
 	const workScopeItems = [
 		{ image: underbushing, title: 'Underbushing' },
@@ -21,32 +22,40 @@
 </script>
 
 <section class="container mx-auto space-y-[52px] px-5 pt-12 pb-[60px] lg:space-y-[60px] lg:p-20">
-	<div class="max-w-[628px] space-y-4">
-		<h2 class="font-faculty-glyphic text-4xl lg:text-5xl">Work Scope</h2>
-		<p class="text-gray-600 lg:text-lg">
-			Our land clearing services cover the full range of preparatory tasks required for estate-grade
-			development:
-		</p>
-	</div>
+	<Animate variant="top">
+		<div class="max-w-[628px] space-y-4">
+			<h2 class="font-faculty-glyphic text-4xl lg:text-5xl">Work Scope</h2>
+			<p class="text-gray-600 lg:text-lg">
+				Our land clearing services cover the full range of preparatory tasks required for
+				estate-grade development:
+			</p>
+		</div>
+	</Animate>
 	<ul class="grid grid-cols-2 gap-2 lg:grid-cols-4">
 		{#each workScopeItems as item}
-			<li class="relative overflow-hidden rounded-sm">
-				<img src={item.image} alt={item.title} class="aspect-square object-cover lg:aspect-video" />
-				<!-- Progressive blur -->
-				<div
-					class="absolute inset-x-0 top-1/6 bottom-0 backdrop-blur-sm"
-					style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
-				></div>
-				<!-- Gradient overlay -->
-				<div
-					class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"
-				></div>
-				<p
-					class="absolute bottom-4 left-4 max-w-[140.5px] font-faculty-glyphic text-xl text-white lg:bottom-[30px] lg:left-6 lg:text-2xl"
-				>
-					{item.title}
-				</p>
-			</li>
+			<Animate variant="scale">
+				<li class="relative overflow-hidden rounded-sm">
+					<img
+						src={item.image}
+						alt={item.title}
+						class="aspect-square object-cover lg:aspect-video"
+					/>
+					<!-- Progressive blur -->
+					<div
+						class="absolute inset-x-0 top-1/6 bottom-0 backdrop-blur-sm"
+						style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
+					></div>
+					<!-- Gradient overlay -->
+					<div
+						class="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"
+					></div>
+					<p
+						class="absolute bottom-4 left-4 max-w-[140.5px] font-faculty-glyphic text-xl text-white lg:bottom-[30px] lg:left-6 lg:text-2xl"
+					>
+						{item.title}
+					</p>
+				</li>
+			</Animate>
 		{/each}
 	</ul>
 </section>
