@@ -43,7 +43,7 @@
 				</div>
 			</div>
 		</Animate>
-		<Animate variant="right" class="col-span-1">
+		<Animate variant="right">
 			<div class="relative self-end justify-self-center overflow-hidden">
 				<img
 					src={about}

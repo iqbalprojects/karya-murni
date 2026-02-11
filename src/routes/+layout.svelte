@@ -13,7 +13,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="app bg-gray-50 font-inter">
+<div class="app overflow-hidden bg-gray-50 font-inter">
 	<Header />
 
 	<main>
