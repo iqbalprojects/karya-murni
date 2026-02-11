@@ -62,19 +62,21 @@
 				</ul>
 			</div>
 		</Animate>
-		<div class="space-y-5 text-gray-950 lg:hidden">
-			<p>
-				Founded in 1981, our company began as a palm estate contractor working with leading
-				organizations such as SIPE, Perkebunan Nusantara, and Lonsum. During the 1980s, we
-				strengthened our reputation by adopting innovative and sustainable methods early on,
-				including becoming one of the first to implement the Zero Burning Method (chipping) for
-				replanting.
-			</p>
-			<p>
-				This commitment to responsible practices has guided us for over four decades. As the
-				industry grew, we expanded our capabilities while staying focused on delivering reliable,
-				environmentally conscious land development solutions.
-			</p>
-		</div>
+		<Animate variant="left">
+			<div class="space-y-5 text-gray-950 lg:hidden">
+				<p>
+					Founded in 1981, our company began as a palm estate contractor working with leading
+					organizations such as SIPE, Perkebunan Nusantara, and Lonsum. During the 1980s, we
+					strengthened our reputation by adopting innovative and sustainable methods early on,
+					including becoming one of the first to implement the Zero Burning Method (chipping) for
+					replanting.
+				</p>
+				<p>
+					This commitment to responsible practices has guided us for over four decades. As the
+					industry grew, we expanded our capabilities while staying focused on delivering reliable,
+					environmentally conscious land development solutions.
+				</p>
+			</div>
+		</Animate>
 	</div>
 </section>
