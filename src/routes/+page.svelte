@@ -12,20 +12,27 @@
 	import Section from '$lib/components/ui/Section.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import Clients from '$lib/components/ui/Clients.svelte';
+	import Animate from '$lib/components/ui/Animate.svelte';
 </script>
 
 <div>
 	<Hero backgroundImage={heroBackground} class="aspect-[9/19.5] bg-center lg:aspect-video">
 		<div class="space-y-4 font-faculty-glyphic">
-			<Section>KARYA MURNI GROUP</Section>
-			<h1 class="text-5xl leading-tight lg:text-[76px]">
-				Leading Palm Estate Contractor Since 1981
-			</h1>
+			<Animate variant="top">
+				<Section>KARYA MURNI GROUP</Section>
+			</Animate>
+			<Animate variant="left">
+				<h1 class="text-5xl leading-tight lg:text-[76px]">
+					Leading Palm Estate Contractor Since 1981
+				</h1>
+			</Animate>
 		</div>
-		<div class="flex flex-wrap gap-3">
-			<Button href="/services/land-clearing" variant="secondary">Our Services</Button>
-			<Button href="/projects" class="bg-white/20">View Projects</Button>
-		</div>
+		<Animate variant="bottom">
+			<div class="flex flex-wrap gap-3">
+				<Button href="/services/land-clearing" variant="secondary">Our Services</Button>
+				<Button href="/projects" class="bg-white/20">View Projects</Button>
+			</div>
+		</Animate>
 	</Hero>
 	<Services />
 	<AboutUs />

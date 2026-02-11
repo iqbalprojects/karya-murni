@@ -4,6 +4,7 @@
 	import Navbar from '$lib/components/layout/Navbar.svelte';
 	import sbpnLogo from '$lib/assets/images/sbpn-logo.webp';
 	import kmpLogo from '$lib/assets/images/kmp-logo.webp';
+	import Animate from '../ui/Animate.svelte';
 
 	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
 
@@ -27,14 +28,21 @@
 	<div
 		class="container mx-auto flex h-[64px] items-center justify-between px-5 lg:h-[72px] lg:px-20"
 	>
-		<a href="/" class="flex items-center gap-x-3">
-			<img src={sbpnLogo} alt="SBPN Logo" class="h-[34.5px] w-[34.5px] lg:h-[46px] lg:w-[46px]" />
-			<img src={kmpLogo} alt="KMP Logo" class="h-9 w-[42.52px] lg:h-12 lg:w-[56.69px]" />
-		</a>
-		<Navbar />
-		<Button
-			class={`hidden lg:block ${isEquipmentDetail ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
-			>Contact us</Button
-		>
+		<Animate variant="left">
+			<a href="/" class="flex items-center gap-x-3">
+				<img src={sbpnLogo} alt="SBPN Logo" class="h-[34.5px] w-[34.5px] lg:h-[46px] lg:w-[46px]" />
+				<img src={kmpLogo} alt="KMP Logo" class="h-9 w-[42.52px] lg:h-12 lg:w-[56.69px]" />
+			</a>
+		</Animate>
+		<Animate variant="scale">
+			<Navbar />
+		</Animate>
+
+		<Animate variant="right">
+			<Button
+				class={`hidden lg:block ${isEquipmentDetail ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
+				>Contact us</Button
+			>
+		</Animate>
 	</div>
 </header>

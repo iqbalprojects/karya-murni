@@ -1,4 +1,5 @@
 <script>
+	import Animate from '$lib/components/ui/Animate.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 
 	const news = [
@@ -25,18 +26,24 @@
 
 <section class="container mx-auto space-y-10 px-5 py-12 text-center lg:space-y-[60px] lg:p-20">
 	<div class="flex items-center justify-between">
-		<h2 class="font-faculty-glyphic text-5xl">Latest news</h2>
-		<Button href="/projects" variant="primary" class="hidden lg:block">View all projects</Button>
+		<Animate variant="left">
+			<h2 class="font-faculty-glyphic text-5xl">Latest news</h2>
+		</Animate>
+		<Animate variant="right">
+			<Button href="/projects" variant="primary" class="hidden lg:block">View all projects</Button>
+		</Animate>
 	</div>
 	<ul class="grid border-[0.5px] text-start lg:grid-cols-3">
 		{#each news as item}
-			<li class="flex h-[368px] flex-col justify-between border-[0.5px] bg-white p-8">
-				<div class="space-y-2">
-					<h3 class="font-faculty-glyphic text-2xl">{item.title}</h3>
-					<p class="text-sm">{item.description}</p>
-				</div>
-				<p class="text-xs text-gray-500">{item.date}</p>
-			</li>
+			<Animate variant="scale">
+				<li class="flex h-[368px] flex-col justify-between border-[0.5px] bg-white p-8">
+					<div class="space-y-2">
+						<h3 class="font-faculty-glyphic text-2xl">{item.title}</h3>
+						<p class="text-sm">{item.description}</p>
+					</div>
+					<p class="text-xs text-gray-500">{item.date}</p>
+				</li>
+			</Animate>
 		{/each}
 	</ul>
 	<Button href="/projects" variant="primary" class="lg:hidden">View all projects</Button>

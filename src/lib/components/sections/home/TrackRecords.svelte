@@ -1,6 +1,7 @@
 <script>
 	import kmpRight from '$lib/assets/images/kmp-right.webp';
 	import rectangle from '$lib/assets/images/rectangle.webp';
+	import Animate from '$lib/components/ui/Animate.svelte';
 
 	const achievements = [
 		{
@@ -37,23 +38,31 @@
 	</div>
 	<div class="relative z-10 container mx-auto flex h-full flex-col justify-between px-5 lg:px-20">
 		<div class="flex flex-col gap-y-3 lg:flex-row! lg:items-center lg:justify-between">
-			<h2 class="max-w-xs font-faculty-glyphic text-4xl leading-[115%] lg:max-w-md lg:text-[52px]">
-				Proven Track Records
-			</h2>
-			<p class="max-w-md text-base text-gray-400 lg:text-lg">
-				Driving responsible land development through proven practices and a commitment to long-term,
-				sustainable growth.
-			</p>
+			<Animate variant="left">
+				<h2
+					class="max-w-xs font-faculty-glyphic text-4xl leading-[115%] lg:max-w-md lg:text-[52px]"
+				>
+					Proven Track Records
+				</h2>
+			</Animate>
+			<Animate variant="right">
+				<p class="max-w-md text-base text-gray-400 lg:text-lg">
+					Driving responsible land development through proven practices and a commitment to
+					long-term, sustainable growth.
+				</p>
+			</Animate>
 		</div>
 		<ul class="flex flex-col gap-y-16 lg:flex-row! lg:items-center lg:gap-x-16">
 			{#each achievements as achievement}
-				<li class="max-w-[275px] space-y-4 lg:space-y-6">
-					<p class="font-faculty-glyphic text-6xl lg:text-7xl">{achievement.value}</p>
-					<div class="space-y-1.5 lg:space-y-2">
-						<h3 class="text-lg font-medium">{achievement.title}</h3>
-						<p class="text-gray-400 lg:text-lg">{achievement.description}</p>
-					</div>
-				</li>
+				<Animate variant="scale">
+					<li class="max-w-[275px] space-y-4 lg:space-y-6">
+						<p class="font-faculty-glyphic text-6xl lg:text-7xl">{achievement.value}</p>
+						<div class="space-y-1.5 lg:space-y-2">
+							<h3 class="text-lg font-medium">{achievement.title}</h3>
+							<p class="text-gray-400 lg:text-lg">{achievement.description}</p>
+						</div>
+					</li>
+				</Animate>
 			{/each}
 		</ul>
 	</div>
