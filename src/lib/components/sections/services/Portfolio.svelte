@@ -25,6 +25,27 @@
 				'“Their team handled underbrushing, felling, and terracing efficiently and safely. Communication was clear throughout, and the final result exceeded our expectations.',
 			description: 'Petro Betrand, Director at PT HM Sampoerna Tbk.',
 			image: portfolio3
+		},
+		{
+			id: 1,
+			title:
+				'“Karya Murni delivered our land clearing project with strong coordination and consistent quality. Terracing, drainage, and access roads were completed on time and to a high standard. A very reliable partner.',
+			description: 'Petro Betrand, Director at PT HM Sampoerna Tbk.',
+			image: portfolio1
+		},
+		{
+			id: 2,
+			title:
+				'“Their team handled underbrushing, felling, and terracing efficiently and safely. Communication was clear throughout, and the final result exceeded our expectations.',
+			description: 'Petro Betrand, Director at PT HM Sampoerna Tbk.',
+			image: portfolio2
+		},
+		{
+			id: 3,
+			title:
+				'“Their team handled underbrushing, felling, and terracing efficiently and safely. Communication was clear throughout, and the final result exceeded our expectations.',
+			description: 'Petro Betrand, Director at PT HM Sampoerna Tbk.',
+			image: portfolio3
 		}
 	];
 </script>
@@ -33,7 +54,7 @@
 	<Carousel.Root>
 		<Carousel.Content>
 			{#each portfolioItems as item}
-				<Carousel.Item class="basis-5/6 first:ml-5 last:mr-5 md:basis-1/2">
+				<Carousel.Item class="basis-5/6 first:ml-5 last:mr-5 md:basis-3/6">
 					<div class="relative overflow-hidden rounded-sm">
 						<img
 							src={item.image}

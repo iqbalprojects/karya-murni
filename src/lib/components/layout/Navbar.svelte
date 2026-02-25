@@ -5,7 +5,9 @@
 	import * as Sheet from '$lib/components/ui/sheet/index.js';
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
 
-	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
+	const isDetailPage = $derived(
+		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/')
+	);
 
 	const navLinks = [
 		{
@@ -25,7 +27,7 @@
 			href: '/equipments',
 			label: 'Equipments'
 		},
-		{ href: '/news', label: 'News' }
+		{ href: '/blog', label: 'News' }
 	] as const;
 
 	let isSheetOpen = $state(false);
@@ -41,7 +43,7 @@
 		<NavigationMenu.Root viewport={false}>
 			<NavigationMenu.List class="space-x-12">
 				{#each navLinks as link}
-					<NavigationMenu.Item class={isEquipmentDetail ? 'text-black' : 'text-white'}>
+					<NavigationMenu.Item class={isDetailPage ? 'text-black' : 'text-white'}>
 						{#if 'subLinks' in link}
 							<NavigationMenu.Trigger class="cursor-pointer bg-transparent"
 								>{link.label}</NavigationMenu.Trigger
@@ -69,7 +71,7 @@
 	<!-- Mobile/Tablet Navigation -->
 	<div class="lg:hidden">
 		<Sheet.Root bind:open={isSheetOpen}>
-			<Sheet.Trigger class={`p-2 ${isEquipmentDetail ? 'text-black' : 'text-white'}`}>
+			<Sheet.Trigger class={`p-2 ${isDetailPage ? 'text-black' : 'text-white'}`}>
 				<MenuIcon />
 			</Sheet.Trigger>
 			<Sheet.Content

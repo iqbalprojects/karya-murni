@@ -6,7 +6,9 @@
 	import kmpLogo from '$lib/assets/images/kmp-logo.webp';
 	import Animate from '../ui/Animate.svelte';
 
-	const isEquipmentDetail = $derived(page.url.pathname.startsWith('/equipments/'));
+	const isDetailPage = $derived(
+		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/')
+	);
 
 	let scrolled = $state(false);
 
@@ -21,9 +23,9 @@
 </script>
 
 <header
-	class="z-50 w-full transition-colors duration-300 {isEquipmentDetail
-		? ''
-		: 'fixed top-0'} {scrolled ? 'bg-black/20 backdrop-blur-sm' : ''}"
+	class="z-50 w-full transition-colors duration-300 {isDetailPage ? '' : 'fixed top-0'} {scrolled
+		? 'bg-black/20 backdrop-blur-sm'
+		: ''}"
 >
 	<div
 		class="container mx-auto flex h-[64px] items-center justify-between px-5 lg:h-[72px] lg:px-20"
@@ -39,7 +41,7 @@
 		</Animate>
 
 		<Animate variant="right" class="hidden lg:block">
-			<Button class={`${isEquipmentDetail ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
+			<Button class={`${isDetailPage ? 'bg-black/5 text-black' : 'bg-black/30 text-white'}`}
 				>Contact us</Button
 			>
 		</Animate>
