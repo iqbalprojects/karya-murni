@@ -34,7 +34,9 @@
 	<a href={`/blog/${blog.slug}`}>
 		{#if index === 0}
 			<!-- Featured Blog Card - Horizontal layout with image -->
-			<div class="flex h-full w-full flex-col overflow-hidden border bg-white p-8 gap-4 lg:gap-8 lg:flex-row">
+			<div
+				class="cursor-pointer flex h-full w-full flex-col gap-4 overflow-hidden border bg-white p-8 lg:flex-row lg:gap-8"
+			>
 				<!-- Image side -->
 				<div
 					class="relative aspect-video h-[240px] w-full overflow-hidden md:h-[300px] lg:h-auto lg:w-[48%]"
@@ -56,6 +58,9 @@
 					<!-- Title -->
 					<div class="space-y-[26px]">
 						<div class="flex flex-col gap-2">
+							<p class="font-medium text-[12px] text-gray-600">
+								{formatDate(blog.published_at || blog.created_at)}
+							</p>
 							<h3 class="font-faculty-glyphic text-[19px] lg:text-[22px] xl:text-[28px]">
 								{blog.title}
 							</h3>
@@ -91,7 +96,7 @@
 						</p>
 					{/if}
 				</div>
-				<p class="font-inter text-[12px] text-[#71717A]">
+				<p class="text-[12px] text-gray-600">
 					{formatDate(blog.published_at || blog.created_at)}
 				</p>
 			</div>

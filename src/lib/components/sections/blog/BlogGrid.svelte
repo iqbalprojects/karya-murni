@@ -28,7 +28,7 @@
 		{/if}
 
 		<!-- Latest Blogs Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  border-[0.5px]">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 			{#each latestBlogs as blog, index}
 				<Animate variant="fade" duration={0.8} delay={index * 0.08}>
 					<BlogCard {blog} index={index + 1} />
