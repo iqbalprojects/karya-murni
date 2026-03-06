@@ -119,15 +119,15 @@
 		</div>
 		</div>
 	</section>
-	<section class="space-y-[60px] bg-gray-50 py-20">
-		<div class="container mx-auto flex justify-between px-5 lg:px-20">
-			<h3 class="font-faculty-glyphic text-5xl">Other projects</h3>
-			<Button variant="primary">View all projects</Button>
+	<section class="space-y-8 bg-gray-50 py-10 md:space-y-12 md:py-16 lg:space-y-[60px] lg:py-20">
+		<div class="container mx-auto flex flex-col gap-y-5 px-5 sm:flex-row sm:items-center sm:justify-between lg:px-20">
+			<h3 class="font-faculty-glyphic text-3xl md:text-4xl lg:text-5xl">Other projects</h3>
+			<Button variant="primary" class="w-fit">View all projects</Button>
 		</div>
 		<Carousel.Root>
-			<Carousel.Content class="pl-5">
+			<Carousel.Content class="pl-5 lg:pl-20">
 				{#each workScopeItems as item}
-					<Carousel.Item class="basis-3/12">
+					<Carousel.Item class="basis-10/12 sm:basis-5/12 md:basis-4/12 lg:basis-3/12">
 						<div class="relative overflow-hidden rounded-sm">
 							<img
 								src={item.image}
@@ -135,7 +135,7 @@
 								class="aspect-square h-full w-full rounded-sm bg-cover object-cover"
 							/>
 							<h4
-								class="absolute top-6 left-6 rounded-full bg-white/75 px-3 py-1 font-semibold text-[#2D5EA2]"
+								class="absolute top-4 left-4 rounded-full bg-white/75 px-3 py-1 text-sm font-semibold text-[#2D5EA2] lg:top-6 lg:left-6 lg:text-base"
 							>
 								Land Clearing
 							</h4>
@@ -143,11 +143,11 @@
 								class="absolute inset-x-0 top-1/3 bottom-0 backdrop-blur-md"
 								style="mask-image: linear-gradient(180deg, transparent 0%, black 100%);"
 							></div>
-							<div class="absolute bottom-5 left-5 max-w-3xl space-y-1 text-white">
-								<h5 class="font-faculty-glyphic text-lg lg:text-xl">
+							<div class="absolute bottom-4 left-4 max-w-3xl space-y-1 text-white lg:bottom-5 lg:left-5">
+								<h5 class="font-faculty-glyphic text-base sm:text-lg lg:text-xl">
 									{article.title}
 								</h5>
-								<p class="text-sm font-medium text-white/60 lg:text-base">{article.location}</p>
+								<p class="text-xs font-medium text-white/60 sm:text-sm lg:text-base">{article.location}</p>
 							</div>
 						</div>
 					</Carousel.Item>
