@@ -1,9 +1,13 @@
-<script>
+<script lang="ts">
 	import Projects from '$lib/components/sections/home/Projects.svelte';
 	import heroBackground from '$lib/assets/images/terracing.webp';
 	import Hero from '$lib/components/ui/Hero.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
+	
 </script>
 
 <SEO 
@@ -17,5 +21,5 @@
 			<h1 class="font-faculty-glyphic text-5xl leading-tight lg:text-[76px]">Projects</h1>
 		</Animate>
 	</Hero>
-	<Projects />
+	<Projects projects={data.item.data} />
 </div>

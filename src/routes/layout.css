@@ -123,3 +123,50 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+/* Plate.js Rich Text Content Styles */
+.plate-content {
+	color: theme('colors.gray.800');
+	line-height: 1.75;
+}
+
+.plate-content p {
+	margin-bottom: 0.5rem;
+}
+
+.plate-content p:last-child {
+	margin-bottom: 0;
+}
+
+.plate-content br {
+	content: '';
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+.plate-content ol {
+	list-style-type: decimal;
+	padding-left: 1.25rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.plate-content ul {
+	list-style-type: disc;
+	padding-left: 1.25rem;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.plate-content li {
+	margin-bottom: 0.25rem;
+}
+
+.plate-content li > strong {
+	font-weight: 700;
+}
+
+.plate-content li > ol,
+.plate-content li > ul {
+	margin-top: 0.25rem;
+}

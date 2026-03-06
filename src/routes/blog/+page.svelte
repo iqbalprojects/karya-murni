@@ -100,7 +100,6 @@
 		}
 	];
 
-	/** @type {any} */
 	let meta = { total: 7, limit: 7, offset: 0 };
 </script>
 
