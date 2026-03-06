@@ -9,118 +9,156 @@
 	let blogs = [
 		{
 			id: 1,
-			title: 'Sustainable Land Clearing Practices for Palm Oil Plantations',
-			slug: 'sustainable-land-clearing-practices',
+			title: 'Replanting: The Key to Sustainable Palm Estate Development',
+			slug: 'replanting-key-sustainable-palm-estate',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop',
 			short_description:
-				'Learn about our zero-burning approach to land clearing that preserves soil quality and reduces environmental impact while maintaining productivity.',
+				'One of the most critical steps in ensuring long-term productivity is replanting – the process of renewing old palm trees with high-quality seedlings while maintaining soil health and environmental standards.',
 			content: '<p>Content here...</p>',
-			published_at: '2024-01-15T10:00:00Z',
-			created_at: '2024-01-15T10:00:00Z',
+			published_at: '2025-03-24T10:00:00Z',
+			created_at: '2025-03-24T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 2,
-			title: 'Modern Terracing Techniques for Hillside Plantations',
-			slug: 'modern-terracing-techniques',
+			title: 'Company Expands Replanting Operations Using Zero Burning Method',
+			slug: 'company-expands-replanting-zero-burning',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop',
 			short_description:
-				'Discover how advanced terracing methods improve water management and prevent soil erosion in challenging terrain.',
+				'Our latest replanting program begins in North Sumatra, reinforcing our commitment to safe and environmentally responsible land practices.',
 			content: '<p>Content here...</p>',
-			published_at: '2024-01-10T10:00:00Z',
-			created_at: '2024-01-10T10:00:00Z',
+			published_at: '2025-03-12T10:00:00Z',
+			created_at: '2025-03-12T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 3,
-			title: 'Drainage System Design for Optimal Plantation Health',
-			slug: 'drainage-system-design',
+			title: 'New Heavy Equipment Units Added to Support Large-Scale Projects',
+			slug: 'new-heavy-equipment-units',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&h=600&fit=crop',
 			short_description:
-				'Proper drainage is crucial for plantation success. Learn about field drains, boundary drains, and water management strategies.',
+				'Additional machinery has been deployed to improve operational efficiency and accelerate project timelines across multiple sites.',
 			content: '<p>Content here...</p>',
-			published_at: '2024-01-05T10:00:00Z',
-			created_at: '2024-01-05T10:00:00Z',
+			published_at: '2025-02-28T10:00:00Z',
+			created_at: '2025-02-28T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 4,
-			title: 'Equipment Maintenance Best Practices',
-			slug: 'equipment-maintenance-best-practices',
+			title: 'Ongoing Infrastructure Development Completed Ahead of Schedule',
+			slug: 'infrastructure-development-completed',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop',
 			short_description:
-				'Keep your heavy machinery running efficiently with our comprehensive maintenance guide for excavators, bulldozers, and more.',
+				'Our team successfully concluded a key access road and drainage project, ensuring smoother estate operations for our client.',
 			content: '<p>Content here...</p>',
-			published_at: '2023-12-28T10:00:00Z',
-			created_at: '2023-12-28T10:00:00Z',
+			published_at: '2025-02-14T10:00:00Z',
+			created_at: '2025-02-14T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 5,
-			title: 'Safety Standards in Plantation Development',
-			slug: 'safety-standards-plantation-development',
+			title: 'New Heavy Equipment Units Added to Support Large-Scale Projects',
+			slug: 'heavy-equipment-support-projects',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop',
 			short_description:
-				'Our commitment to ISO and SMK3 certifications ensures the highest safety standards for workers and the environment.',
+				'Additional machinery has been deployed to improve operational efficiency and accelerate project timelines across multiple sites.',
 			content: '<p>Content here...</p>',
-			published_at: '2023-12-20T10:00:00Z',
-			created_at: '2023-12-20T10:00:00Z',
+			published_at: '2025-02-10T10:00:00Z',
+			created_at: '2025-02-10T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 6,
-			title: 'Replanting Strategies for Aging Palm Plantations',
-			slug: 'replanting-strategies-aging-palms',
+			title: 'Company Expands Replanting Operations Using Zero Burning Method',
+			slug: 'company-replanting-zero-burning-method',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop',
 			short_description:
-				'Maximize productivity with strategic replanting approaches that improve palm density and long-term yield.',
+				'Our latest replanting program begins in North Sumatra, reinforcing our commitment to safe and environmentally responsible land practices.',
 			content: '<p>Content here...</p>',
-			published_at: '2023-12-15T10:00:00Z',
-			created_at: '2023-12-15T10:00:00Z',
+			published_at: '2025-03-12T10:00:00Z',
+			created_at: '2025-03-12T10:00:00Z',
 			is_active: true
 		},
 		{
 			id: 7,
-			title: 'Infrastructure Development for Remote Plantations',
-			slug: 'infrastructure-development-remote-plantations',
+			title: 'Ongoing Infrastructure Development Completed Ahead of Schedule',
+			slug: 'ongoing-infrastructure-development',
 			thumbnail_url:
 				'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop',
 			short_description:
-				'Building roads, bridges, and temporary infrastructure to support efficient plantation operations in challenging locations.',
+				'Our team successfully concluded a key access road and drainage project, ensuring smoother estate operations for our client.',
 			content: '<p>Content here...</p>',
-			published_at: '2023-12-10T10:00:00Z',
-			created_at: '2023-12-10T10:00:00Z',
+			published_at: '2025-02-14T10:00:00Z',
+			created_at: '2025-02-14T10:00:00Z',
+			is_active: true
+		},
+		{
+			id: 8,
+			title: 'New Heavy Equipment Units Added to Support Large-Scale Projects',
+			slug: 'new-heavy-equipment-large-scale',
+			thumbnail_url: '',
+			short_description:
+				'Additional machinery has been deployed to improve operational efficiency and accelerate project timelines across multiple sites.',
+			content: '<p>Content here...</p>',
+			published_at: '2025-02-26T10:00:00Z',
+			created_at: '2025-02-26T10:00:00Z',
+			is_active: true
+		},
+		{
+			id: 9,
+			title: 'Ongoing Infrastructure Development Completed Ahead of Schedule',
+			slug: 'ongoing-infrastructure-ahead-schedule',
+			thumbnail_url: '',
+			short_description:
+				'Our team successfully concluded a key access road and drainage project, ensuring smoother estate operations for our client.',
+			content: '<p>Content here...</p>',
+			published_at: '2025-02-14T10:00:00Z',
+			created_at: '2025-02-14T10:00:00Z',
+			is_active: true
+		},
+		{
+			id: 10,
+			title: 'Company Expands Replanting Operations Using Zero Burning Method',
+			slug: 'company-expands-replanting-operations',
+			thumbnail_url: '',
+			short_description:
+				'Our latest replanting program begins in North Sumatra, reinforcing our commitment to safe and environmentally responsible land practices.',
+			content: '<p>Content here...</p>',
+			published_at: '2025-03-12T10:00:00Z',
+			created_at: '2025-03-12T10:00:00Z',
 			is_active: true
 		}
 	];
 
-	let meta = { total: 7, limit: 7, offset: 0 };
+	let meta = { total: 15, limit: 10, offset: 0 };
 </script>
 
 <SEO
-	title="Blog - News & Updates"
+	title="Blog - News & Insight"
 	description="Read our latest news, updates, and insights about plantation development and earthworks."
 />
 
 <div>
-	<div class="h-[500px] w-full bg-[#18181B] px-5 pt-10 lg:pt-[68px]">
+	<!-- Hero Section -->
+	<div class="h-[500px] w-full bg-primary px-5 pt-10 lg:pt-[152px]">
 		<div
-			class="container mx-auto flex flex-col items-center justify-center gap-1.5 lg:items-start lg:gap-3 lg:px-20"
+			class="container mx-auto flex flex-col items-center justify-center gap-4 text-white"
 		>
-			<span class="font-semibold text-[#0EF016]">BLOG</span>
-			<h1 class="text-center text-[28px] font-bold text-white lg:text-start lg:text-5xl">
-				{categorySlug ? `${categorySlug.toUpperCase().replace('-', ' ')}` : 'NEWS & UPDATES'}
+			<span class="text-sm font-semibold lg:text-base">• Blog •</span>
+			<h1 class="font-faculty-glyphic text-center text-3xl lg:text-6xl">
+				News & Insight
 			</h1>
 		</div>
 	</div>
 
-	<div class="py-8">
+	<!-- Blog Content -->
+	<div class="pb-6 lg:pb-10">
 		<BlogGrid {blogs} {meta} />
 	</div>
 </div>

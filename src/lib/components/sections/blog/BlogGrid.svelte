@@ -1,6 +1,5 @@
 <script>
 	import BlogCard from './BlogCard.svelte';
-	import * as Pagination from '$lib/components/ui/pagination/index.js';
 	import Animate from '$lib/components/ui/Animate.svelte';
 
 	/** @type {any[]} */
@@ -9,6 +8,9 @@
 	/** @type {any} */
 	export let meta = null;
 
+	/** @type {boolean} */
+	export let loading = false;
+
 	// Logic to split Featured vs Latest
 	$: featuredBlog = blogs.length > 0 ? blogs[0] : null;
 	$: latestBlogs = blogs.length > 1 ? blogs.slice(1) : [];
@@ -16,62 +18,46 @@
 
 <div class="container mx-auto px-5 md:px-10 lg:px-20">
 	{#if blogs.length > 0}
-		<!-- Featured Blog Card Wrapper -->
+		<!-- Featured Blog Card -->
 		{#if featuredBlog}
-			<div class="w-full">
-				<div class="-mt-85 mb-10 lg:-mt-70 lg:mb-12">
+			<Animate variant="fade" duration={1}>
+				<div class="-mt-85 mb-8 lg:-mt-40 lg:mb-[60px]">
 					<BlogCard blog={featuredBlog} index={0} />
 				</div>
-			</div>
+			</Animate>
 		{/if}
 
-		<!-- Latest Blogs Content -->
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:gap-10 2xl:gap-14">
+		<!-- Latest Blogs Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  border-[0.5px]">
 			{#each latestBlogs as blog, index}
-				<BlogCard {blog} index={index + 1} />
+				<Animate variant="fade" duration={0.8} delay={index * 0.08}>
+					<BlogCard {blog} index={index + 1} />
+				</Animate>
 			{/each}
 		</div>
 
-		<!-- Pagination -->
-		{#if meta && meta.total > meta.limit}
-			<div class="mt-10 mb-12 lg:mt-12 lg:mb-20">
-				<Animate variant="fade" duration={1.5}>
-					<Pagination.Root count={meta.total} perPage={meta.limit}>
-						{#snippet children({ pages, currentPage: paginationCurrentPage })}
-							<Pagination.Content>
-								<Pagination.Item>
-									<Pagination.Previous class="cursor-pointer" />
-								</Pagination.Item>
-								{#each pages as page (page.key)}
-									{#if page.type === 'ellipsis'}
-										<Pagination.Item>
-											<Pagination.Ellipsis />
-										</Pagination.Item>
-									{:else}
-										<Pagination.Item>
-											<Pagination.Link
-												class="cursor-pointer"
-												{page}
-												isActive={paginationCurrentPage === page.value}
-											>
-												{page.value}
-											</Pagination.Link>
-										</Pagination.Item>
-									{/if}
-								{/each}
-								<Pagination.Item>
-									<Pagination.Next class="cursor-pointer" />
-								</Pagination.Item>
-							</Pagination.Content>
-						{/snippet}
-					</Pagination.Root>
+		<!-- Load More Button -->
+		{#if meta && meta.total > blogs.length}
+			<div class="mt-10 mb-6 flex justify-center lg:mt-14 lg:mb-10">
+				<Animate variant="fade" duration={1}>
+					<button
+						class="cursor-pointer rounded-[6px] border border-[#18181B] bg-transparent px-7 py-2 font-inter text-[13px] font-medium text-[#18181B] transition-all duration-300 hover:bg-[#18181B] hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+						disabled={loading}
+						on:click
+					>
+						{#if loading}
+							Loading...
+						{:else}
+							Load more
+						{/if}
+					</button>
 				</Animate>
 			</div>
 		{/if}
 	{:else}
 		<!-- Empty State -->
 		<div class="-mt-20 w-full rounded-lg border bg-white p-10 text-center shadow-sm">
-			<p class="text-gray-500">No blogs posted yet.</p>
+			<p class="text-[#71717A]">No blogs posted yet.</p>
 		</div>
 	{/if}
 </div>
