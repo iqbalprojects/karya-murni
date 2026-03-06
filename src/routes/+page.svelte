@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
 	import heroBackground from '$lib/assets/images/hero-bg-home.webp';
-
 	import Services from '$lib/components/sections/home/Services.svelte';
 	import AboutUs from '$lib/components/sections/home/AboutUs.svelte';
 	import divider from '$lib/assets/images/divider.webp';
@@ -14,6 +13,9 @@
 	import Clients from '$lib/components/ui/Clients.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 </script>
 
 <SEO 
@@ -44,9 +46,9 @@
 	<Services />
 	<AboutUs />
 	<img src={divider} alt="Divider" class="h-5 w-full object-cover" />
-	<Projects />
+	<Projects projects={data.item.data} />
 	<Clients />
 	<TrackRecords />
-	<News />
+	<News news={data.blogs.data} />
 	<ContactUs />
 </div>

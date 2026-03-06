@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import heroBackground from '$lib/assets/images/hero-bg-services.webp';
 	import Hero from '$lib/components/ui/Hero.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
@@ -14,6 +14,9 @@
 	import ContactUs from '$lib/components/sections/home/ContactUs.svelte';
 	import Animate from '$lib/components/ui/Animate.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 </script>
 
 <SEO 
@@ -43,6 +46,6 @@
 	<Clients />
 	<TrackRecords />
 	<Portfolio />
-	<Projects />
+	<Projects projects={data.item.data} />
 	<ContactUs />
 </div>

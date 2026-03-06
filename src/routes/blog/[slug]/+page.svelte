@@ -19,9 +19,9 @@
 
 <SEO title={blog.title} description={blog.short_description || 'Read our latest blog post'} />
 
-<div class="pt-[60px]">
-	<div class="mb-20 space-y-[60px]">
-		<Animate variant="top" class="container mx-auto px-5 lg:px-20">
+<div class="pt-8 lg:pt-[60px]">
+	<div class="mb-12 space-y-8 lg:mb-20 lg:space-y-[60px]">
+		<Animate variant="top" class="container mx-auto px-5 lg:px-20 overflow-hidden">
 			<Breadcrumb.Root>
 				<Breadcrumb.List>
 					<Breadcrumb.Item>
@@ -33,7 +33,7 @@
 					</Breadcrumb.Item>
 					<Breadcrumb.Separator />
 					<Breadcrumb.Item>
-						<Breadcrumb.Page class="capitalize">{(page.params.slug ?? '').replaceAll('-', ' ')}</Breadcrumb.Page>
+						<Breadcrumb.Page class="capitalize line-clamp-1">{(page.params.slug ?? '').replaceAll('-', ' ')}</Breadcrumb.Page>
 					</Breadcrumb.Item>
 				</Breadcrumb.List>
 			</Breadcrumb.Root>
@@ -41,14 +41,14 @@
 
 		<article>
 			<!-- Blog Header -->
-			<header class="mb-8 lg:mb-11 container mx-auto px-5 lg:px-20">
-				<h1 class="font-faculty-glyphic text-4xl leading-[115%] lg:text-5xl">{blog.title}</h1>
+			<header class="mb-8 container mx-auto px-5 lg:mb-11 lg:px-20">
+				<h1 class="font-faculty-glyphic text-3xl leading-[115%] md:text-4xl lg:text-5xl">{blog.title}</h1>
 			</header>
 
 			<!-- Featured Image -->
 			{#if blog.thumbnail_url}
 				<div class="mb-8 lg:mb-[60px]">
-					<img src={blog.thumbnail_url} alt={blog.title} class="h-auto w-full object-cover aspect-24/7" />
+					<img src={blog.thumbnail_url} alt={blog.title} class="h-[250px] w-full object-cover sm:h-[400px] lg:h-auto lg:aspect-24/7" />
 				</div>
 			{/if}
 

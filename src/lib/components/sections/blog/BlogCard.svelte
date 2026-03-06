@@ -85,7 +85,7 @@
 			</div>
 		{:else}
 			<!-- Regular Blog Card - Text only, no image -->
-			<div class="flex h-[368px] flex-col justify-between border-[0.5px] p-8">
+			<div class="flex h-[368px] flex-col justify-between bg-white border-[0.5px] p-8">
 				<div class="flex flex-col gap-2">
 					<h3 class="line-clamp-3 font-faculty-glyphic lg:text-2xl">
 						{blog.title}

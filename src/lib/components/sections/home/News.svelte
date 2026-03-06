@@ -1,27 +1,19 @@
-<script>
+<script lang="ts">
 	import Animate from '$lib/components/ui/Animate.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 
-	const news = [
-		{
-			title: 'Company Expands Replanting Operations Using Zero Burning Method',
-			description:
-				'Our latest replanting program begins in North Sumatra, reinforcing our commitment to safe and environmentally responsible land practices.',
-			date: '12 March 2025'
-		},
-		{
-			title: 'New Heavy Equipment Units Added to Support Large-Scale Projects',
-			description:
-				'Additional machinery has been deployed to improve operational efficiency and accelerate project timelines across multiple sites.',
-			date: '28 February 2025'
-		},
-		{
-			title: 'Ongoing Infrastructure Development Completed Ahead of Schedule',
-			description:
-				'Our team successfully concluded a key access road and drainage project, ensuring smoother estate operations for our client.',
-			date: '14 February 2025'
-		}
-	];
+	let { news = [] }: { news?: any[] } = $props();
+
+	function formatDate(dateString: string) {
+		const date = new Date(dateString);
+		return date.toLocaleDateString('en-GB', {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric'
+		});
+	}
+
+	let visibleNews = $derived(news?.filter((item: any) => item.is_active).slice(0, 3) || []);
 </script>
 
 <section class="container mx-auto space-y-10 px-5 py-12 text-center lg:space-y-[60px] lg:p-20">
@@ -30,21 +22,25 @@
 			<h2 class="font-faculty-glyphic text-5xl">Latest news</h2>
 		</Animate>
 		<Animate variant="right">
-			<Button href="/projects" variant="primary" class="hidden lg:block">View all projects</Button>
+			<Button href="/blog" variant="primary" class="hidden lg:block">View all news</Button>
 		</Animate>
 	</div>
-	<ul class="grid border-[0.5px] text-start lg:grid-cols-3">
-		{#each news as item}
+	<ul class="grid text-start lg:grid-cols-3">
+		{#each visibleNews as item}
 			<Animate variant="scale">
-				<li class="flex h-[368px] flex-col justify-between border-[0.5px] bg-white p-8">
-					<div class="space-y-2">
-						<h3 class="font-faculty-glyphic text-2xl">{item.title}</h3>
-						<p class="text-sm">{item.description}</p>
-					</div>
-					<p class="text-xs text-gray-500">{item.date}</p>
-				</li>
+				<a href={`/blog/${item.slug}`} class="block h-full cursor-pointer hover:bg-gray-50 transition-colors">
+					<li class="flex h-[368px] flex-col justify-between border-[0.5px] bg-white p-8">
+						<div class="space-y-2">
+							<h3 class="font-faculty-glyphic text-2xl line-clamp-3">{item.title}</h3>
+							{#if item.short_description}
+								<p class="text-sm line-clamp-3">{item.short_description}</p>
+							{/if}
+						</div>
+						<p class="text-xs text-gray-500">{formatDate(item.published_at || item.created_at)}</p>
+					</li>
+				</a>
 			</Animate>
 		{/each}
 	</ul>
-	<Button href="/projects" variant="primary" class="lg:hidden">View all projects</Button>
+	<Button href="/blog" variant="primary" class="lg:hidden">View all news</Button>
 </section>
