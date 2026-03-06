@@ -31,7 +31,7 @@
 </script>
 
 {#if blog.is_active}
-	<a href={`/blog/${blog.slug}`} class="block h-full no-underline">
+	<a href={`/blog/${blog.slug}`}>
 		{#if index === 0}
 			<!-- Featured Blog Card - Horizontal layout with image -->
 			<div class="flex h-full w-full flex-col overflow-hidden border bg-white p-8 gap-4 lg:gap-8 lg:flex-row">
