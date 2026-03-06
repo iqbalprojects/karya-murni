@@ -20,7 +20,7 @@
 	{#if blogs.length > 0}
 		<!-- Featured Blog Card -->
 		{#if featuredBlog}
-			<Animate variant="fade" duration={1}>
+			<Animate variant="top">
 				<div class="-mt-85 mb-8 lg:-mt-40 lg:mb-[60px]">
 					<BlogCard blog={featuredBlog} index={0} />
 				</div>

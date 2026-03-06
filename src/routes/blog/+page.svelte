@@ -18,14 +18,14 @@
 
 <div>
 	<!-- Hero Section -->
-	<Animate variant="top">
-		<div class="h-[500px] w-full bg-primary px-5 pt-10 lg:pt-[152px]">
+	<div class="h-[500px] w-full bg-primary px-5 pt-10 lg:pt-[152px]">
+		<Animate variant="top">
 			<div class="container mx-auto flex flex-col items-center justify-center gap-4 text-white">
 				<span class="text-sm font-semibold lg:text-base">• Blog •</span>
 				<h1 class="text-center font-faculty-glyphic text-3xl lg:text-6xl">News & Insight</h1>
 			</div>
-		</div>
-	</Animate>
+		</Animate>
+	</div>
 
 	<!-- Blog Content -->
 	<div class="pb-6 lg:pb-10">

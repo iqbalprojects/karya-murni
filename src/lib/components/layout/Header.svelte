@@ -23,7 +23,7 @@
 </script>
 
 <header
-	class="z-50 w-full transition-colors duration-300 {isDetailPage ? '' : 'fixed top-0'} {scrolled
+	class="z-50 w-full transition-colors duration-300 {isDetailPage ? 'sticky top-0 bg-white lg:bg-transparent' : 'fixed top-0'} {scrolled
 		? 'bg-black/20 backdrop-blur-sm'
 		: ''}"
 >

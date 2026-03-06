@@ -119,7 +119,7 @@
 		</div>
 		</div>
 	</section>
-	<section class="space-y-8 bg-gray-50 py-10 md:space-y-12 md:py-16 lg:space-y-[60px] lg:py-20">
+	<!-- <section class="space-y-8 bg-gray-50 py-10 md:space-y-12 md:py-16 lg:space-y-[60px] lg:py-20">
 		<div class="container mx-auto flex flex-col gap-y-5 px-5 sm:flex-row sm:items-center sm:justify-between lg:px-20">
 			<h3 class="font-faculty-glyphic text-3xl md:text-4xl lg:text-5xl">Other projects</h3>
 			<Button variant="primary" class="w-fit">View all projects</Button>
@@ -154,6 +154,6 @@
 				{/each}
 			</Carousel.Content>
 		</Carousel.Root>
-	</section>
+	</section> -->
 	<ContactUs />
 </div>
