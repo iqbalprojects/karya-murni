@@ -6,7 +6,7 @@
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
 
 	const isDetailPage = $derived(
-		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/')
+		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/') || page.url.pathname.startsWith('/blog/')
 	);
 
 	const navLinks = [

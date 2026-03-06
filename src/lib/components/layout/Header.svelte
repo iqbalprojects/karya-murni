@@ -7,7 +7,7 @@
 	import Animate from '../ui/Animate.svelte';
 
 	const isDetailPage = $derived(
-		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/')
+		page.url.pathname.startsWith('/equipments/') || page.url.pathname.startsWith('/projects/') || page.url.pathname.startsWith('/blog/')
 	);
 
 	let scrolled = $state(false);

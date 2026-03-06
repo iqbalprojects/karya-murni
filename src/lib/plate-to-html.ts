@@ -1,12 +1,14 @@
 /**
- * Converts Plate.js (Slate-based) JSON description blocks into semantic HTML.
+ * Converts Plate.js (Slate-based) JSON content blocks into semantic HTML.
  *
- * Handles:
+ * Handles the flat structure from Plate.js IndentListPlugin:
  *  - Regular paragraphs
- *  - Bold text and custom font sizes
+ *  - Bold, italic, underline text and custom font sizes
  *  - Ordered lists (decimal) and unordered lists (disc)
  *  - Nested/indented lists
+ *  - List item continuation paragraphs (description text under list items)
  *  - Empty paragraphs as spacers
+ *  - Newline characters in text
  */
 
 interface PlateChild {
@@ -24,6 +26,7 @@ interface PlateBlock {
 	indent?: number;
 	listStyleType?: string;
 	listStart?: number;
+	listRestartPolite?: number;
 }
 
 function renderChildren(children: PlateChild[]): string {
@@ -32,6 +35,9 @@ function renderChildren(children: PlateChild[]): string {
 			if (child.text === '') return '';
 
 			let html = escapeHtml(child.text);
+
+			// Convert newline characters to <br> tags
+			html = html.replace(/\n/g, '<br>');
 
 			if (child.bold) {
 				html = `<strong>${html}</strong>`;
@@ -86,11 +92,11 @@ export function plateToHtml(jsonString: string): string {
 	while (i < blocks.length) {
 		const block = blocks[i];
 
-		// If it's a list item, group consecutive list items at this indent level
+		// If it's a list item, process the entire list group
 		if (block.listStyleType && block.indent) {
-			html += renderListGroup(blocks, i);
-			// Skip past all blocks consumed by renderListGroup
-			i = skipListGroup(blocks, i, block.indent);
+			const result = processListGroup(blocks, i);
+			html += result.html;
+			i = result.nextIndex;
 		} else {
 			// Regular paragraph
 			html += renderParagraph(block);
@@ -102,10 +108,23 @@ export function plateToHtml(jsonString: string): string {
 }
 
 /**
- * Renders a group of list items starting at `startIndex`,
- * including nested sub-lists.
+ * Processes a group of list items starting at `startIndex`.
+ *
+ * In Plate.js IndentListPlugin (flat structure), list items and their
+ * description/continuation paragraphs are siblings:
+ *
+ *   { indent:1, listStyleType:"decimal", children: "Land Clearing" }   ← list item
+ *   { indent:1,                          children: "Old palms..." }    ← continuation
+ *   { indent:1, listStyleType:"decimal", children: "Soil Prep" }      ← next list item
+ *   { indent:1,                          children: "The soil..." }     ← continuation
+ *
+ * Continuation paragraphs (same indent, no listStyleType) are rendered
+ * inside the preceding <li> element.
  */
-function renderListGroup(blocks: PlateBlock[], startIndex: number): string {
+function processListGroup(
+	blocks: PlateBlock[],
+	startIndex: number
+): { html: string; nextIndex: number } {
 	const baseIndent = blocks[startIndex].indent!;
 	const listType = blocks[startIndex].listStyleType!;
 	const tag = getListTag(listType);
@@ -116,56 +135,70 @@ function renderListGroup(blocks: PlateBlock[], startIndex: number): string {
 	while (i < blocks.length) {
 		const block = blocks[i];
 
-		// Stop if this block is not a list item or has a lower indent than our base
-		if (!block.listStyleType || !block.indent || block.indent < baseIndent) {
-			break;
-		}
+		// Exit if block has no indent or is at a lower indent level
+		if (!block.indent || block.indent < baseIndent) break;
 
-		// If the block is at the same indent level, it's a direct <li>
-		if (block.indent === baseIndent) {
+		// Exit if block is a different list type at the same indent level
+		if (block.indent === baseIndent && block.listStyleType && block.listStyleType !== listType)
+			break;
+
+		if (block.indent === baseIndent && block.listStyleType === listType) {
+			// This is a list item at our level
 			const content = renderChildren(block.children);
-			// Check if the next block(s) are nested sub-lists
-			const nextIndex = i + 1;
-			if (
-				nextIndex < blocks.length &&
-				blocks[nextIndex].indent &&
-				blocks[nextIndex].indent! > baseIndent &&
-				blocks[nextIndex].listStyleType
-			) {
-				// This <li> has nested content
-				html += `<li>${content}`;
-				html += renderListGroup(blocks, nextIndex);
-				html += `</li>`;
-				i = skipListGroup(blocks, nextIndex, blocks[nextIndex].indent!);
+			html += `<li>${content}`;
+			i++;
+
+			// Collect follow-up content for this list item:
+			// - Continuation/description paragraphs (same indent, no listStyleType)
+			// - Nested sub-lists (higher indent with listStyleType)
+			while (i < blocks.length) {
+				const next = blocks[i];
+
+				// Exit if no indent or lower indent than our base
+				if (!next.indent || next.indent < baseIndent) break;
+
+				// Exit if next block is another list item at the same level
+				if (next.indent === baseIndent && next.listStyleType) break;
+
+				if (next.indent > baseIndent && next.listStyleType) {
+					// Nested sub-list at a deeper indent
+					const nested = processListGroup(blocks, i);
+					html += nested.html;
+					i = nested.nextIndex;
+				} else if (!next.listStyleType) {
+					// Continuation paragraph (description text under the list item)
+					const desc = renderChildren(next.children);
+					if (desc) {
+						html += `<p>${desc}</p>`;
+					}
+					i++;
+				} else {
+					break;
+				}
+			}
+
+			html += '</li>';
+		} else if (block.indent > baseIndent) {
+			// Deeper indent encountered — could be a nested list or orphaned content
+			if (block.listStyleType) {
+				const nested = processListGroup(blocks, i);
+				html += nested.html;
+				i = nested.nextIndex;
 			} else {
-				html += `<li>${content}</li>`;
+				// Orphaned indented paragraph without preceding list item — render inline
+				const content = renderChildren(block.children);
+				if (content) {
+					html += `<p>${content}</p>`;
+				}
 				i++;
 			}
 		} else {
-			// Deeper indent encountered without parent — render as nested group
-			html += renderListGroup(blocks, i);
-			i = skipListGroup(blocks, i, block.indent);
+			break;
 		}
 	}
 
 	html += `</${tag}>`;
-	return html;
-}
-
-/**
- * Skips past all consecutive list blocks at `baseIndent` or deeper.
- * Returns the next index to process.
- */
-function skipListGroup(blocks: PlateBlock[], startIndex: number, baseIndent: number): number {
-	let i = startIndex;
-	while (i < blocks.length) {
-		const block = blocks[i];
-		if (!block.listStyleType || !block.indent || block.indent < baseIndent) {
-			break;
-		}
-		i++;
-	}
-	return i;
+	return { html, nextIndex: i };
 }
 
 /**

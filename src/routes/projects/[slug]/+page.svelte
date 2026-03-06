@@ -65,7 +65,7 @@
 					</Breadcrumb.Item>
 					<Breadcrumb.Separator />
 					<Breadcrumb.Item>
-						<Breadcrumb.Page class="capitalize">{page.params.slug}</Breadcrumb.Page>
+						<Breadcrumb.Page class="capitalize">{(page.params.slug ?? '').replaceAll('-', ' ')}</Breadcrumb.Page>
 					</Breadcrumb.Item>
 				</Breadcrumb.List>
 			</Breadcrumb.Root>
